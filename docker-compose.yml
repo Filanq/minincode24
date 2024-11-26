@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  web:
+    build: ./
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/home/app/minincode
+    restart: always
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  db:
+    image: mysql
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_DATABASE: 'minincode_codemakers'
+      MYSQL_USER: 'minincode_root'
+      MYSQL_PASSWORD: 'Ujkjdjkjvrf'
+      MYSQL_ROOT_PASSWORD: 'Ujkjdjkjvrf'
+    restart: always
+    volumes:
+      - mysql:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      - PMA_ARBITRARY=1
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - web
+    volumes:
+      - ./nginx/certs:/etc/ssl/certs
+
+volumes:
+  mysql:
