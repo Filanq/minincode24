@@ -1,17 +1,19 @@
 <template>
-    <header>
+    <header :class="{'header_relative': relative}" class="grid grid-row gap-10 jc-s ai-c">
         <router-link :to="{name: 'home'}">home</router-link>
-        <router-link :to="{name: 'home'}">about</router-link>
+        <router-link :to="{name: 'about'}">about</router-link>
     </header>
 </template>
 
 <script setup lang="ts">
-    import { RouterLink } from 'vue-router'
+    import { RouterLink } from 'vue-router';
+
+    // Set Props
+    const props = defineProps(['relative']);
 </script>
 
 <style scoped>
     header{
-        line-height: 1.5;
         max-height: 100vh;
     }
 </style>

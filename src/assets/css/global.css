@@ -50,6 +50,9 @@ header{
     z-index: 9;
     width: 100%;
 }
+.header_relative{
+    position: relative;
+}
 .section{
     width: 100%;
     display: grid;
