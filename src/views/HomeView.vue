@@ -105,10 +105,6 @@
 </script>
 
 <style scoped>
-    .home__section{
-        margin-left: 300px;
-    }
-
     h2{
         text-align: start;
     }
