@@ -98,7 +98,6 @@ header{
     align-content: center;
     z-index: 2;
     position: relative;
-    overflow: hidden;
 }
 .container{
     padding: 0 10%;
@@ -327,15 +326,6 @@ p{
 }
 
 /* TODO: Set Input And Form Styles */
-/*.input{*/
-/*    border: none;*/
-/*    border-bottom: 1px solid black;*/
-/*    padding: 7px 5px;*/
-/*    background-color: transparent;*/
-/*    outline: none;*/
-/*    width: 100%;*/
-/*    color: var(--colorBlack);*/
-/*}*/
 /*.label{*/
 /*    position: relative;*/
 /*    width: 100%;*/

@@ -2,7 +2,7 @@
     <main>
         <section class="left-part">
             <div class="inner-container">
-                <h1 class="h1">Вход</h1>
+                <h2 class="h1">Вход</h2>
                 <p class="mini-text">Еще нет аккаунта? <router-link :to="{name: 'registration'}">Регистрация</router-link></p>
                 <form class="form-container">
                     <label>
@@ -110,7 +110,6 @@ button {
     background-color: #000;
     border-radius: 200px;
     border: none;
-    color: var(--colorWhite);
     cursor: pointer;
 }
 </style>
