@@ -32,6 +32,9 @@
 
     /* TODO: Set Color */
 }
+body{
+    background-color: var(--colorGrey);
+}
 /* Global */
 :root{
     /* TODO: Set Colors */

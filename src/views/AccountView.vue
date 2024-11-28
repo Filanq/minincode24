@@ -1,6 +1,6 @@
 <template>
     <h1>Личный кабмнет, Name</h1>
-    <HeaderComponent : />
+    <HeaderComponent />
     <div></div>
 </template>
 

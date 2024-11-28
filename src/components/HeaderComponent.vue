@@ -72,6 +72,7 @@
     // Change Header Cursor And Current Section on Click
     function setHeaderCursor(element: HTMLElement): void {
         activeBtn.value = element;
+        console.log(1);
         if (element.classList.contains('header-section-1')) {
             if (headerCursor1.active) {
                 headerCursor1.width = element.offsetWidth;
@@ -175,5 +176,67 @@
         display: flex;
         align-items: center;
         font-size: 26px;
+    }
+    .project__container{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .choosing-person_wrap{
+        position: relative;
+        inset: 0;
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        background-color: rgb(49, 49, 49);
+        border-radius: 50px;
+        padding: 8px 10px;
+        width: fit-content;
+    }
+
+    .person-cursor {
+        position: absolute;
+        top: 8px;
+        left: 10px;
+        /* width: 129px; */
+        height: 44px;
+        border-radius: 50px;
+        background-color: #0069ff;
+        z-index: 1;
+        transition: all .3s ease-in-out;
+    }
+
+    .header-cursor {
+        position: absolute;
+        left: 10px;
+        /* width: 129px; */
+        height: 41px;
+        border-radius: 50px;
+        background-color: #0069ff;
+        z-index: 1;
+        transition: opacity .3s cubic-bezier(.5, 0, .5, 0), left .3s ease-in-out, width .3s ease-in-out, height .3s ease-in-out;
+    }
+
+    .hideHeaderCursor {
+        opacity: 0;
+        transition: opacity .3s cubic-bezier(0, .5, 0, .5), left .3s ease-in-out, width .3s ease-in-out, height .3s ease-in-out;
+    }
+
+    .person-btn{
+        cursor: pointer;
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 50px;
+        z-index: 2;
+    }
+
+    /* .person-btn:hover{
+        outline: var(--colorBlue) 2px solid;
+    } */
+
+    .person-btn--active{
+        background-color: blue;
+        outline: blue 2px solid;
     }
 </style>

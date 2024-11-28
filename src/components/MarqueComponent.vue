@@ -75,6 +75,7 @@
     }
     .wrap{
         transform: rotate(-4deg);
+        background-color: var(--colorGrey);
     }
     h1 {
         font-size: 2em;
@@ -121,7 +122,6 @@
         margin: 20px 0;
         text-align: center;
         bottom: 0;
-        background: #fff;
         padding: 5px;
     }
     .perfscan hr {
