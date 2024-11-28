@@ -32,6 +32,9 @@
 
     /* TODO: Set Color */
 }
+body{
+    background-color: var(--colorGrey);
+}
 /* Global */
 :root{
     /* TODO: Set Colors */
@@ -44,7 +47,7 @@
     /* TODO: Set Borders */
     /* Borders */
 
-    --h1: 54px;
+    --h1: 10vw;
     --h2: 48px;
     --h3: 36px;
     --h4: 28px;
@@ -87,12 +90,12 @@ header{
     position: relative;
 }
 .container{
+    padding: 0 10%;
     width: 100%;
     display: grid;
     grid-auto-flow: row;
     justify-items: center;
     align-content: start;
-    padding: 0 5%;
 }
 
 .btn{
