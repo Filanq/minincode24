@@ -14,7 +14,7 @@
             </div>
             <div class="grid grid-column gap-10">
                 <router-link :to="{name: 'home'}" class="link header_link">Войти</router-link>
-                <router-link :to="{name: 'home'}" class="link header_link header_link--green">Регистрация</router-link>
+                <router-link :to="{name: 'home'}" class="link header_link header_link--blue">Регистрация</router-link>
             </div>
             <!-- TODO: ДЛЯ beckend -->
             <!-- <div class="link header_link header_link--red">Выйти</div> -->
@@ -54,8 +54,8 @@
         color: rgb(255, 18, 0);
     }
 
-    .header_link--green{
-        color: green;
+    .header_link--blue{
+        color: var(--colorBlueMain);
     }
 
     

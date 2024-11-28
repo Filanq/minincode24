@@ -39,7 +39,8 @@
     /* Colors */
     --colorGrey: rgb(247, 247, 253);
     --colorWhite: #fff;
-    --colorMain: #C7CDF3;
+    --colorBlueLight: #C7CDF3;
+    --colorBlueMain: rgb(145, 158, 241);
 
     /* TODO: Set Borders */
     /* Borders */
