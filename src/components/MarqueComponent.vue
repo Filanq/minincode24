@@ -76,6 +76,7 @@
     .wrap{
         transform: rotate(-4deg);
         background-color: var(--colorGrey);
+        padding-bottom: 50px;
     }
     h1 {
         font-size: 2em;
