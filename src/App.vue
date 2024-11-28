@@ -1,8 +1,5 @@
 <template>
-    <div :class="{'main-app_grid': $route.name !== 'login' && $route.name !== 'registration'}">
-        <HeaderComponent 
-            :relative="header_relative"
-            />
+    <div class="main-app_grid">
         <RouterView/>
     </div>
     
@@ -20,10 +17,5 @@
 </script>
 
 <style scoped>
-    .main-app_grid{
-        display: grid;
-        grid-template-columns: auto 1fr;
-        position: relative;
-        margin-left: 300px;
-    }
+
 </style>
