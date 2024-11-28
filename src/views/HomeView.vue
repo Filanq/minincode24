@@ -1,5 +1,5 @@
 <template>
-    <div class="section grid grid-column ac-s gap-40">
+    <div class="home__section section grid grid-column ac-s gap-40">
         <div class="container grid grid-column jc-s ai-s">
             <h2 class="h2 mb-10">Здравствуйте, Name!</h2>
             <p class="width-100">Войди в мир IT вместе с нами...</p>
@@ -105,6 +105,10 @@
 </script>
 
 <style scoped>
+    .home__section{
+        margin-left: 300px;
+    }
+
     h2{
         text-align: start;
     }
@@ -158,6 +162,7 @@
 
     .news_block{
         position: relative;
+        cursor: pointer;
     }
 
     .event__name_organ{

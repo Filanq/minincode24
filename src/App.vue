@@ -3,7 +3,7 @@
         <HeaderComponent 
             :relative="header_relative"
             />
-        <RouterView />
+        <RouterView/>
     </div>
     
 </template>
@@ -24,5 +24,6 @@
         display: grid;
         grid-template-columns: auto 1fr;
         position: relative;
+        margin-left: 300px;
     }
 </style>
