@@ -3,13 +3,13 @@
         <div class="container header__container grid grid-column ac-sb">
             <div class="grid grid-column gap-75">
                 <span class="logo">MininCode</span>
-                <nav class="grid grid-column gap-10 ac-s">
+                <nav class="grid grid-column gap-25 ac-s">
                     <!-- заменить name -->
                     <router-link v-for="button in buttons" :to="{name: button.view}" class="link header_link">{{ button.title }}</router-link>
                 </nav>
             </div>
             <div class="grid grid-column gap-10">
-                <router-link :to="{name: 'home'}" class="link header_link">< Главная</router-link>
+                <router-link :to="{name: 'home'}" class="link header_link">← Главная</router-link>
             </div>
             <!-- TODO: ДЛЯ beckend -->
             <!-- <div class="link header_link header_link--red">Выйти</div> -->

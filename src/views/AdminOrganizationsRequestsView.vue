@@ -1,6 +1,6 @@
 <template>
     <HeaderAdminComponent :buttons="buttons" />
-    Заявки
+    
 </template>
 
 <script setup>
