@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '@/views/HomeView.vue';
-import AboutView from '@/views/AboutView.vue';
+import NewsView from '@/views/NewsView.vue';
 import RegistrationView from '@/views/RegistrationView.vue';
 import LoginView from '@/views/LoginView.vue';
 import OrganizationsView from '@/views/OrganizationsView.vue';
@@ -14,13 +14,9 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/about',
-      name: 'about',
-      component: AboutView,
-    },
-    {
-      path: '/account',
-      redirect: '/account/registration',
+      path: '/news',
+      name: 'news',
+      component: NewsView,
     },
     {
       path: '/registration',

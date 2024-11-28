@@ -13,8 +13,8 @@
             </nav>
             </div>
             <div class="grid grid-column gap-10">
-                <router-link :to="{name: 'home'}" class="link header_link">Войти</router-link>
-                <router-link :to="{name: 'home'}" class="link header_link header_link--blue">Регистрация</router-link>
+                <router-link :to="{name: 'login'}" class="link header_link">Войти</router-link>
+                <router-link :to="{name: 'registration'}" class="link header_link header_link--blue">Регистрация</router-link>
             </div>
             <!-- TODO: ДЛЯ beckend -->
             <!-- <div class="link header_link header_link--red">Выйти</div> -->
@@ -34,6 +34,11 @@
         height: 100vh;
         background-color: white;
         display: flex;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 9;
+        width: 300px;
         padding: 40px 0;
     }
 
