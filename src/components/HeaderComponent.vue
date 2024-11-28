@@ -1,7 +1,7 @@
 <template>
     <div class="section header__section">
         <div class="container header__container grid grid-column ac-sb">
-            <dir class="grid grid-column gap-75">
+            <div class="grid grid-column gap-75">
                 <span class="logo">MininCode</span>
                 <nav class="grid grid-column gap-10 ac-s">
                 <!-- заменить name -->
@@ -11,9 +11,13 @@
                 <router-link :to="{name: 'home'}" class="link header_link">Мероприятия</router-link>
                 <router-link :to="{name: 'home'}" class="link header_link">Новости</router-link>
             </nav>
-            </dir>
-            
-            <dir class="link header_link header_link--red">Выйти</dir>
+            </div>
+            <div class="grid grid-column gap-10">
+                <router-link :to="{name: 'home'}" class="link header_link">Войти</router-link>
+                <router-link :to="{name: 'home'}" class="link header_link header_link--green">Регистрация</router-link>
+            </div>
+            <!-- TODO: ДЛЯ beckend -->
+            <!-- <div class="link header_link header_link--red">Выйти</div> -->
         </div>
     </div>
 </template>
@@ -48,6 +52,10 @@
 
     .header_link--red{
         color: rgb(255, 18, 0);
+    }
+
+    .header_link--green{
+        color: green;
     }
 
     
