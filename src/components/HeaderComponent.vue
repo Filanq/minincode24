@@ -1,9 +1,32 @@
 <template>
-    
+    <div v-if="$route.name !== 'login' && $route.name !== 'registration'" class="section header__section">
+        <div class="container header__container grid grid-column ac-sb">
+            <div class="grid grid-column gap-75">
+                <span class="logo">MininCode</span>
+                <nav class="grid grid-column gap-10 ac-s">
+                    <!-- заменить name -->
+                    
+                    <router-link :to="{name: 'home'}" class="link header_link">Главная</router-link>
+                    <router-link :to="{name: 'home'}" class="link header_link">Личный кабинет</router-link>
+                    <router-link :to="{name: 'home'}" class="link header_link">Организации</router-link>
+                    <router-link :to="{name: 'home'}" class="link header_link">Мероприятия</router-link>
+                    <router-link :to="{name: 'home'}" class="link header_link">Новости</router-link>
+                </nav>
+            </div>
+            <div class="grid grid-column gap-10">
+                <router-link :to="{name: 'login'}" class="link header_link">Войти</router-link>
+                <router-link :to="{name: 'registration'}" class="link header_link header_link--blue">Регистрация</router-link>
+            </div>
+            <!-- TODO: ДЛЯ beckend -->
+            <!-- <div class="link header_link header_link--red">Выйти</div> -->
+        </div>
+    </div>
 </template>
 
 <script setup lang="ts">
     import { RouterLink } from 'vue-router';
+
+    defineProps()
 </script>
 
 <style scoped>
