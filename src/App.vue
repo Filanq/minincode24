@@ -1,5 +1,5 @@
 <template>
-    <div class="main-app_grid">
+    <div :class="{'main-app_grid': $route.name !== 'login' && $route.name !== 'registration'}">
         <HeaderComponent 
             :relative="header_relative"
             />
