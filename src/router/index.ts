@@ -3,6 +3,7 @@ import HomeView from '@/views/HomeView.vue';
 import AboutView from '@/views/AboutView.vue';
 import RegistrationView from '@/views/RegistrationView.vue';
 import LoginView from '@/views/LoginView.vue';
+import OrganizationsView from '@/views/OrganizationsView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,14 +23,19 @@ const router = createRouter({
       redirect: '/account/registration',
     },
     {
-      path: '/account/registration',
+      path: '/registration',
       name: 'registration',
       component: RegistrationView,
     },
     {
-      path: '/account/login',
+      path: '/login',
       name: 'login',
       component: LoginView,
+    },
+    {
+      path: '/organizations',
+      name: 'organizations',
+      component: OrganizationsView,
     },
   ],
 });
