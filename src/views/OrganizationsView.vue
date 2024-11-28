@@ -58,20 +58,15 @@
                     zoom: zoom.value,
                     controls: ['fullscreenControl'],
                 });
-                map.value.addChild(new ymaps({
-                    coordinates: [56.297462, 43.919970],
-                    title: 'Hello World!',
-                    subtitle: 'kind and bright',
-                    color: 'blue'
-                }));
-            });
-        }
+                let myGeoObject = new ymaps.GeoObject({
+                    geometry: {
+                        type: "Point", // тип геометрии - точка
+                        coordinates: [55.8, 37.8] // координаты точки
+                    }
+                });
 
-        function setMarkers(){
-            for (let i = 0; i < coordinates.value.length; i++) {
-                let placemark = new ymaps.Placemark(coordinates.value[i]);
-                map.value.geoObjects.add(placemark);
-            }
+                map.value.geoObjects.add(myGeoObject);
+            });
         }
 
         let scriptYandexMap = document.createElement('script');
