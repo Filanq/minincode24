@@ -37,7 +37,7 @@
 :root{
     /* TODO: Set Colors */
     /* Colors */
-    --colorGrey: #FBFBFB;
+    --colorGrey: rgb(247, 247, 253);
     --colorWhite: #fff;
     --colorMain: #C7CDF3;
 
