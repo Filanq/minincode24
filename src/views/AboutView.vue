@@ -1,5 +1,7 @@
 <template>
-  <main>
-    Вторая страница
-  </main>
+  <div class="section">
+    <div class="container">
+        
+    </div>
+  </div>
 </template>

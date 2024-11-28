@@ -19,6 +19,9 @@
 :root{
     /* TODO: Set Colors */
     /* Colors */
+    --colorGrey: #FBFBFB;
+    --colorWhite: #fff;
+    --colorMain: #C7CDF3;
 
     /* TODO: Set Borders */
     /* Borders */
@@ -45,6 +48,7 @@ html::-webkit-scrollbar-thumb{
 html{
     scroll-behavior: smooth;
 }
+
 header{
     position: fixed;
     z-index: 9;
@@ -54,6 +58,7 @@ header{
     position: relative;
 }
 .section{
+    background-color: var(--colorGrey);
     width: 100%;
     display: grid;
     padding: 100px 0;
@@ -98,7 +103,7 @@ header{
 .link{
     color: black;
     text-decoration: none;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 /* TODO: Buttons Styles */
 .w-200{

@@ -1,7 +1,9 @@
 <template>
-    <HeaderComponent :relative="header_relative" class="mb-25"/>
-
-    <RouterView />
+    <div class="main-app_grid">
+        <HeaderComponent :relative="header_relative" class="mb-25"/>
+        <RouterView />
+    </div>
+    
 </template>
 
 <script setup lang="ts">
@@ -13,3 +15,10 @@
     // Is Header Relative
     const header_relative: Ref<boolean> = ref(true);
 </script>
+
+<style scoped>
+    .main-app_grid{
+        display: grid;
+        grid-template-columns: 1fr 5.5fr;
+    }
+</style>
