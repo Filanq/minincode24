@@ -5,17 +5,11 @@
                 <span class="logo">MininCode</span>
                 <nav class="grid grid-column gap-10 ac-s">
                     <!-- заменить name -->
-                    
-                    <router-link :to="{name: 'home'}" class="link header_link">Главная</router-link>
-                    <router-link :to="{name: 'home'}" class="link header_link">Личный кабинет</router-link>
-                    <router-link :to="{name: 'home'}" class="link header_link">Организации</router-link>
-                    <router-link :to="{name: 'home'}" class="link header_link">Мероприятия</router-link>
-                    <router-link :to="{name: 'home'}" class="link header_link">Новости</router-link>
+                    <router-link v-for="button in buttons" :to="{name: button.view}" class="link header_link">{{ button.title }}</router-link>
                 </nav>
             </div>
             <div class="grid grid-column gap-10">
-                <router-link :to="{name: 'login'}" class="link header_link">Войти</router-link>
-                <router-link :to="{name: 'registration'}" class="link header_link header_link--blue">Регистрация</router-link>
+                <router-link :to="{name: 'home'}" class="link header_link">< Главная</router-link>
             </div>
             <!-- TODO: ДЛЯ beckend -->
             <!-- <div class="link header_link header_link--red">Выйти</div> -->
@@ -26,7 +20,12 @@
 <script setup lang="ts">
     import { RouterLink } from 'vue-router';
 
-    defineProps()
+    defineProps({
+        buttons: {
+            type: Array,
+            required: true,
+        },
+    });
 </script>
 
 <style scoped>
