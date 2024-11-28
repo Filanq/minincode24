@@ -82,12 +82,13 @@ header{
     background-color: var(--colorGrey);
     width: 100%;
     display: grid;
-    padding: 40px 0;
+    padding: 100px 0;
     grid-auto-flow: row;
     justify-items: center;
     align-content: center;
     z-index: 2;
     position: relative;
+    overflow-x: hidden;
 }
 .container{
     padding: 0 10%;
