@@ -133,6 +133,8 @@
     })
 
     let isBurgerOpen = ref(false)
+
+    // defineProps()
 </script>
 
 <style scoped>

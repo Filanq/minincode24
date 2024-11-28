@@ -30,6 +30,7 @@
 <style scoped>
 main {
     display: flex;
+    width: 100%;
     height: 100vh;
 }
 .left-part {
@@ -38,6 +39,7 @@ main {
     justify-content: center;
     align-items: center;
     width: 50%;
+    max-width: 600px;
     height: 100%;
     background-color: var(--colorWhite);
     padding: 30px;
@@ -47,7 +49,7 @@ main {
     max-width: 500px;
 }
 .right-part {
-    width: 50%;
+    flex-grow: 1;
     height: 100%;
     background-color: var(--colorGrey);
 }

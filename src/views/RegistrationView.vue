@@ -75,6 +75,7 @@
 <style scoped>
 main {
     display: flex;
+    width: 100%;
     height: 100vh;
 }
 .left-part {
