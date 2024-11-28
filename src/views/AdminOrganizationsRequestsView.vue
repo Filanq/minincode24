@@ -1,10 +1,10 @@
 <template>
-    <HeaderComponent :buttons="buttons" />
+    <HeaderAdminComponent :buttons="buttons" />
     Заявки
 </template>
 
 <script setup>
-    import HeaderComponent from "@/components/HeaderComponent.vue";
+    import HeaderAdminComponent from "@/components/HeaderAdminComponent.vue";
 
     const buttons = [
         {

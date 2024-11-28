@@ -1,11 +1,11 @@
 <template>
     <h1>Личный кабинет орг, Мероприятия</h1>
-    <HeaderComponent :buttons="buttons" />
+    <HeaderAdminComponent :buttons="buttons" />
     <div></div>
 </template>
 
 <script setup>
-    import HeaderComponent from "@/components/HeaderComponent.vue";
+    import HeaderAdminComponent from "@/components/HeaderAdminComponent.vue";
 
     const buttons = [
         {
