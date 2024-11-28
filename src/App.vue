@@ -19,6 +19,6 @@
 <style scoped>
     .main-app_grid{
         display: grid;
-        grid-template-columns: 1fr 5.5fr;
+        grid-template-columns: auto 1fr;
     }
 </style>

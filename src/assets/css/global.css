@@ -1,5 +1,23 @@
 /* Fonts */
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/ttf/Montserrat-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/ttf/Montserrat-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/ttf/Montserrat-Light.ttf);
+    font-weight: 300;
+}
 /* TODO: Install Fonts */
+
 
 /* CSS Reset */
 *{
@@ -7,13 +25,13 @@
     margin: 0;
 
     /* TODO: Set Font */
-    /*font-family: , serif;*/
+    font-family: Montserrat;
 
     font-size: var(--defaultFont);
     box-sizing: border-box;
 
     /* TODO: Set Color */
-    /*color: var(--colorBlack);*/
+    color: --;
 }
 /* Global */
 :root{
