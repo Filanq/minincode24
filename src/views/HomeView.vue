@@ -9,13 +9,18 @@
     <MarqueComponent/>
 
     <about-component/>
+
+    <DirectionsComponent/>
+
+    <NewsComponent/>
 </template>
 
 <script setup>
     import MarqueComponent from '@/components/MarqueComponent.vue';
     import HeaderComponent from '@/components/HeaderComponent.vue';
     import AboutComponent from '@/components/AboutComponent.vue';
-    import {reactive} from 'vue';
+    import DirectionsComponent from '@/components/DirectionsComponent.vue';
+    import NewsComponent from '@/components/NewsComponent.vue';
 
     const anchors = {
         homeAnch: null,
