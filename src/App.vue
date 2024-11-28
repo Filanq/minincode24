@@ -10,11 +10,11 @@
 
 <script setup lang="ts">
     import HeaderComponent from "@/components/HeaderComponent.vue";
-    import { RouterView, useRoute  } from 'vue-router';
+    import { RouterView  } from 'vue-router';
     import type {Ref} from "vue";
     import {ref} from "vue";
 
-    // Is Header Relative
+    // Is Header Relative   
     const header_relative: Ref<boolean> = ref(true);
 
 </script>
