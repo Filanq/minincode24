@@ -129,8 +129,14 @@ header{
 .w-200{
     font-weight: 200;
 }
+.w-300{
+    font-weight: 300;
+}
 .w-400{
     font-weight: 400;
+}
+.w-500{
+    font-weight: 500;
 }
 .w-600{
     font-weight: 600;
