@@ -1,7 +1,7 @@
 <template>
     <section class="section news__section">
         <div class="container news__container">
-            <h2 class="h2"><span class="blue">_</span>Новости</h2>
+            <h2 class="h2"><span class="blue h2">_</span>Новости</h2>
             <div class="news__main_wrap">
                 <router-link :to="cur_news.link" target="_blank" class="news__main_block" v-for="cur_news in news">
                     <img src="#" :key="cur_news.id" :alt="cur_news.title">

@@ -142,6 +142,7 @@
     .header__section{
         padding: 20px 0;   
         z-index: 10;
+        background-color: rgba(0, 0, 0, 0);
         position: fixed;
     }
     .header_nav{

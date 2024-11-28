@@ -79,12 +79,13 @@
     .wrap{
         transform: rotate(-4deg);
         background-color: var(--colorGrey);
-        width: 100vw;
+        width: 100%;
         position: absolute;
         height: 200px;
         top: 50px;
         left: 0;
     }
+
     .wrap__parent{
         overflow: hidden;
         padding: 150px;
@@ -121,7 +122,7 @@
         align-items: center;
         font-size: 25px;
         font-weight: bold;
-        color: #000000;
+        color: var(--colorWhite);
         margin: 10px 0;
         transition: all 0.1s ease-in-out;
     }

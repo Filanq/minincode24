@@ -32,26 +32,24 @@
 
     /* TODO: Set Color */
 }
-body{
-    background-color: var(--colorGrey);
-}
+
 /* Global */
 :root{
     /* TODO: Set Colors */
     /* Colors */
-    --colorGrey: rgb(247, 247, 253);
+    --colorGrey: #10002B;
     --colorWhite: #fff;
     --colorBlueLight: #C7CDF3;
-    --colorBlueMain: rgb(145, 158, 241);
+    --colorBlueMain: #9d4edd;
 
     /* TODO: Set Borders */
     /* Borders */
 
     --h1: 10vw;
-    --h2: 48px;
-    --h3: 36px;
-    --h4: 28px;
-    --h5: 24px;
+    --h2: 70px;
+    --h3: 50px;
+    --h4: 38px;
+    --h5: 30px;
     --h6: 20px;
     --h7: 16px;
     --defaultFont: 18px;
@@ -68,6 +66,18 @@ html::-webkit-scrollbar-thumb{
 }
 html{
     scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--colorGrey);
+}
+
+p, span, div, a{
+    color: var(--colorWhite);
+}
+
+.blue{
+    color: var(--colorBlueMain);
 }
 
 header{
@@ -102,11 +112,12 @@ header{
 .btn{
     padding: 16px 28px;
     border-radius: 200px;
-    background-color: black;
+    background-color: var(--colorBlueMain);
     color: white;
     font-weight: 700;
     font-size: 18px;
     width: fit-content;
+    text-decoration: none;
 }
 
 .h1{
@@ -133,6 +144,11 @@ header{
 .h7{
     font-size: var(--h7);
 }
+
+p{
+    font-size: 20px;
+}
+
 .default-font{
     font-size: var(--defaultFont);
 }
