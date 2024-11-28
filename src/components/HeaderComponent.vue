@@ -34,6 +34,11 @@
         height: 100vh;
         background-color: white;
         display: flex;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 9;
+        width: 300px;
         padding: 40px 0;
     }
 

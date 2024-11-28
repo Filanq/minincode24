@@ -10,17 +10,22 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force"
   },
+  "module": "dist/notistack.esm.js",
   "dependencies": {
     "express": "^4.21.1",
+    "install": "^0.13.0",
+    "npm": "^10.9.1",
     "pinia": "^2.2.6",
     "vue": "^3.5.12",
-    "vue-router": "^4.4.5"
+    "vue-router": "^4.4.5",
+    "vue-yandex-maps": "^2.1.4"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.9.0",
     "@vitejs/plugin-vue": "^5.1.4",
     "@vue/tsconfig": "^0.5.1",
+    "@yandex/ymaps3-types": "^1.0.15395607",
     "npm-run-all2": "^7.0.1",
     "typescript": "~5.6.3",
     "vite": "^5.4.10",
