@@ -19,10 +19,6 @@ const router = createRouter({
       component: AboutView,
     },
     {
-      path: '/account',
-      redirect: '/account/registration',
-    },
-    {
       path: '/registration',
       name: 'registration',
       component: RegistrationView,

@@ -3,7 +3,7 @@
         <section class="left-part">
             <div class="inner-container">
                 <h1 class="h1">Регистрация</h1>
-                <p class="mini-text">Уже есть аккаунт? <router-link :to="{name: 'login'}">Войти</router-link></p>
+                <p class="mini-text">Уже есть аккаунт? <router-link :to="{name: 'login'}" class="link">Войти</router-link></p>
                 <form v-if="formType == 'user'" class="form-container">
                     <label>
                         Фамилия
