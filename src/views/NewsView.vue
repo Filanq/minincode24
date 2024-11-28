@@ -1,131 +1,83 @@
 <template>
-    <section class="section grid grid-column ac-s gap-40">
-        <div class="container">
-            <h3 class="h3 mb-10">Новости</h3>
-            <span class="mini-text">Что-то</span>
-        </div>
-        <div class="news_wrap grid grid-row gap-25">
-            <div class="news_block grid grid-column gap-10">
-                <img src="../assets/images/news_test.webp" alt="news">
-                <h4>Не пенить Александра</h4>
-                <div class="grid grid-row jc-sb">
-                    <p class="event_time">22.06.2025</p>
-                    <p class="event_time">IT-новости</p>
-                </div>
-                <p class="event__name_organ">Кванториум</p>
-            </div>
-
-            <div class="news_block grid grid-column gap-10">
-                <img src="../assets/images/news_test.webp" alt="news">
-                <h4>Не пенить Александра</h4>
-                <div class="grid grid-row jc-sb">
-                    <p class="event_time">22.06.2025</p>
-                    <p class="event_time">IT-новости</p>
-                </div>
-                <p class="event__name_organ">IT-cube</p>
-            </div>
-
-            <div class="news_block grid grid-column gap-10">
-                <img src="../assets/images/news_test.webp" alt="news">
-                <h4>Не пенить Александра</h4>
-                <div class="grid grid-row jc-sb">
-                    <p class="event_time">22.06.2025</p>
-                    <p class="event_time">IT-новости</p>
-                </div>
-                <p class="event__name_organ">IT-cube</p>
-            </div>
-
-            <div class="news_block grid grid-column gap-10">
-                <img src="../assets/images/news_test.webp" alt="news">
-                <h4>Не пенить Александра</h4>
-                <div class="grid grid-row jc-sb">
-                    <p class="event_time">22.06.2025</p>
-                    <p class="event_time">IT-новости</p>
-                </div>
-                <p class="event__name_organ">IT-cube</p>
+    <header-component />
+    <section class="section news__section">
+        <div class="container news__container gap-50">
+            <h2 class="h2 ta-c"><span class="blue">_</span>Новости</h2>
+            <div class="news__main_wrap gap-25">
+                <router-link :to="cur_news.link" target="_blank" class="news__main_block" v-for="cur_news in news">
+                    <img src="#" :key="cur_news.id" :alt="cur_news.title">
+                    <h5>{{ cur_news.title }}</h5>
+                    <div class="news__info">
+                        <div class="news-info__item">{{ cur_news.organization.name }}</div>
+                        <div class="news-info__item">{{ cur_news.date }}</div>
+                    </div>
+                </router-link>
             </div>
         </div>
     </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import type {Ref} from "vue";
+import {ref} from "vue";
+import HeaderComponent from "@/components/HeaderComponent.vue";
 
+const news: Ref<Object[]> = ref([{id: 0, title: 'title', img: '', organization: {name: 'it-cube'}, date: '11-11-1111'}]);
+
+function getNews(): void {
+    news.value = [
+        {id: 0, title: 'title', img: '', organization: {name: 'it-cube'}, date: '11-11-1111'},
+        {id: 0, title: 'title', img: '', organization: {name: 'it-cube'}, date: '11-11-1111'},
+        {id: 0, title: 'title', img: '', organization: {name: 'it-cube'}, date: '11-11-1111'},
+    ];
+}
+getNews();
 </script>
 
 <style scoped>
-    h3 {
-        align-self: start;
-    }
-    .mini-text {
-        display: inline;
-        font-weight: 300;
-        color: #858585;
-        font-size: 14px;
-    }
-    h2{
-        text-align: start;
-    }
+.news__section{
+    padding-top: 150px;
+}
+.news__container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
 
-    .organ__container{
-        grid-template-columns: 2fr 1fr;
-    }
+.news__main_wrap{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
 
-    .organ_block{
-        padding: 30px;
-        background-color: var(--colorBlueLight);
-        color: #fff;
-        border-radius: 20px;
-    }
+.news__main_block{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-decoration: none;
+}
 
-    .organ_btn{
-        background-color: white;
-        color: black;
-    }
+.news__main_block > img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    pointer-events: none;
+}
 
-    .events_link{
-        padding: 20px;
-        background-color: white;
-        border-radius: 15px;
-    }
+.news__main_block > h5{
+    padding: 0 5px;
+}
 
-    .events_link > div{
-        gap: 5px;
-    }
+.news__info{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
 
-    .event_time{
-        font-size: 14px;
-        color: #858585;
-    }
-
-    .event_link > img{
-        height: 100%;
-    }
-
-    .news_wrap{
-        grid-template-columns: repeat(4, 1fr)
-    }
-
-    .news_block > img{
-        width: 100%;
-        height: 160px;
-        border-radius: 20px;
-        object-fit: cover;
-        object-position: center;
-    }
-
-    .news_block{
-        position: relative;
-        cursor: pointer;
-    }
-
-    .event__name_organ{
-        position: absolute;
-        z-index: 2;
-        padding: 6px 10px;
-        background-color: white;
-        border-radius: 200px;
-        font-size: 14px;
-        top: 8px;
-        left: 8px;
-    }
+.news-info__item{
+    font-size: 18px;
+    padding: 7px 14px;
+    border-radius: 50px;
+    outline: 1px solid rgb(49, 49, 49);
+}
 </style>

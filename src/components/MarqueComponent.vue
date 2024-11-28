@@ -1,69 +1,72 @@
 <template>
-    <div class="wrap">
-        <div class="items-wrap">
-            <div class="items marquee">
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-            </div>
+    <div class="wrap__parent">
+        <div class="wrap">
+            <div class="items-wrap">
+                <div class="items marquee">
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                </div>
 
-            <div aria-hidden="true" class="items marquee">
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
+                <div aria-hidden="true" class="items marquee">
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                </div>
             </div>
-        </div>
-        <div class="items-wrap">
-            <div class="items marquee reverce">
-                <div class="item">Рыба Рыба</div>
-                <div class="item">Рыба Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-            </div>
-            <div aria-hidden="true" class="items marquee reverce">
-                <div class="item">Рыба Рыба</div>
-                <div class="item">Рыба Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
-                <div class="item">Рыба</div>
+            <div class="items-wrap">
+                <div class="items marquee reverce">
+                    <div class="item">Рыба Рыба</div>
+                    <div class="item">Рыба Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                </div>
+                <div aria-hidden="true" class="items marquee reverce">
+                    <div class="item">Рыба Рыба</div>
+                    <div class="item">Рыба Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                    <div class="item">Рыба</div>
+                </div>
             </div>
         </div>
     </div>
+
 </template>
 
 <style scoped>
@@ -76,7 +79,16 @@
     .wrap{
         transform: rotate(-4deg);
         background-color: var(--colorGrey);
-        padding-bottom: 50px;
+        width: 100vw;
+        position: absolute;
+        height: 200px;
+        top: 50px;
+        left: 0;
+    }
+    .wrap__parent{
+        overflow: hidden;
+        padding: 150px;
+        position: relative;
     }
     h1 {
         font-size: 2em;
@@ -146,3 +158,5 @@
     }
 
 </style>
+<script setup lang="ts">
+</script>

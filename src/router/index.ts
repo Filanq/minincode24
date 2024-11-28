@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '@/views/HomeView.vue';
 import NewsView from '@/views/NewsView.vue';
+import EventsView from '@/views/EventsView.vue';
 import RegistrationView from '@/views/RegistrationView.vue';
 import LoginView from '@/views/LoginView.vue';
 import OrganizationsView from '@/views/OrganizationsView.vue';
@@ -86,6 +87,16 @@ const router = createRouter({
       path: '/org_account/guests',
       name: 'org_account_guests',
       component: OrgAccountGuestsView,
+    },
+    {
+      path: '/news',
+      name: 'news',
+      component: NewsView,
+    },
+    {
+      path: '/events',
+      name: 'events',
+      component: EventsView,
     },
   ],
 });
