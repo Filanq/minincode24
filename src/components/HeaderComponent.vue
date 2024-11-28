@@ -1,5 +1,5 @@
 <template>
-    <div class="section header__section">
+    <div v-if="$route.name !== 'login' && $route.name !== 'registration'" class="section header__section">
         <div class="container header__container grid grid-column ac-sb">
             <div class="grid grid-column gap-75">
                 <span class="logo">MininCode</span>
