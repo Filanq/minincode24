@@ -101,6 +101,8 @@ input {
     border-radius: 10px;
     border: solid #000 1px;
     padding: 10px;
+    background-color: #FFFFFF10;
+    color: var(--colorWhite);
 }
 input:focus {
     outline: none;

@@ -4,7 +4,7 @@
         <HelloAccountComponent :name="'«Тайно дернул»'" />
         <div class="inner-container">
             <div class="title-add-container">
-                <h3 class="h3">Новости организации</h3>
+                <h3 class="h3">Мероприятия организации</h3>
                 <div class="add-btn">
                     <img src="@/assets/images/icon/plus.svg" alt="">
                     Добавить

@@ -9,7 +9,7 @@ import UserAccountFullnameSettingsView from '@/views/UserAccountFullnameSettings
 import UserAccountEventsListView from '@/views/UserAccountEventsListView.vue';
 import AdminOrganizationsRequestsView from '@/views/AdminOrganizationsRequestsView.vue';
 import OrgAccountDataSettingsView from '@/views/OrgAccountDataSettingsView.vue';
-import OrgAccountEventssView from '@/views/OrgAccountEventssView.vue';
+import OrgAccountEventsView from '@/views/OrgAccountEventsView.vue';
 import OrgAccountNewsView from '@/views/OrgAccountNewsView.vue';
 import OrgAccountGuestsView from '@/views/OrgAccountGuestsView.vue';
 
@@ -76,7 +76,7 @@ const router = createRouter({
     {
       path: '/org_account/events',
       name: 'org_account_events',
-      component: OrgAccountEventssView,
+      component: OrgAccountEventsView,
     },
     {
       path: '/org_account/news',
