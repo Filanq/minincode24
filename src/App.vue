@@ -1,6 +1,6 @@
 <template>
     <div class="main-app_grid">
-        <HeaderComponent :relative="header_relative" class="mb-25"/>
+        <HeaderComponent v-if="true" :relative="header_relative" class="mb-25"/>
         <RouterView />
     </div>
     
@@ -14,11 +14,15 @@
 
     // Is Header Relative
     const header_relative: Ref<boolean> = ref(true);
+
+    // Define Emits
+    const emits = defineEmits(['authorize_or_registrze_modal']);
 </script>
 
 <style scoped>
     .main-app_grid{
         display: grid;
         grid-template-columns: auto 1fr;
+        position: relative;
     }
 </style>
