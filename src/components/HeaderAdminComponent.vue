@@ -2,8 +2,8 @@
     <div v-if="$route.name !== 'login' && $route.name !== 'registration'" class="section header__section">
         <div class="container header__container grid grid-column ac-sb">
             <div class="grid grid-column gap-75">
-                <span class="logo">MininCode</span>
-                <nav class="grid grid-column gap-25 ac-s">
+                <span class="logo ta-c">MininCode</span>
+                <nav class="grid grid-column ac-s">
                     <!-- заменить name -->
                     <router-link v-for="button in buttons" :to="{name: button.view}" class="link header_link">{{ button.title }}</router-link>
                 </nav>
@@ -31,7 +31,7 @@
 <style scoped>
     .header__section{
         height: 100vh;
-        background-color: white;
+        background-color: var(--colorBlueMain);
         display: flex;
         position: fixed;
         left: 0;
@@ -42,11 +42,18 @@
     }
 
     .header__container{
-        padding: 0 60px;
+        padding: 0 20px;
+    }
+
+    .header__container > div:first-child > nav {
+        gap: 20px;
     }
 
     .header_link{
         font-size: 18px;
+        color: var(--colorWhite);
+        border-radius: 15px;
+        padding: 10px 20px;
     }
 
     .logo{
@@ -59,8 +66,11 @@
     }
 
     .header_link--blue{
-        color: var(--colorBlueMain);
+        color: var(--colorWhite);
     }
 
-    
+    .router-link-exact-active {
+        background-color: var(--colorBlueLight);
+        color: #000;
+    }
 </style>

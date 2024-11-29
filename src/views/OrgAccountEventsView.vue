@@ -138,7 +138,8 @@
         outline: none;
     }
 
-    .news-info__item.delete-event > img {
+    .news-info__item.delete-event > img,
+    .news-info__item.edit-event > img {
         filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(257deg) brightness(102%) contrast(104%);
     }
     .title-add-container {
