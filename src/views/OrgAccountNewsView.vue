@@ -1,11 +1,13 @@
 <template>
     <HeaderAdminComponent :buttons="buttons" />
+    <ModalRedactComponent v-if="showRedactModal" :changeCondRedactModal="changeCondRedactModal" />
+    <ModalCreateComponent v-if="showCreateModal" :changeCondCreateModal="changeCondCreateModal" />  
     <div class="container-with-header">
         <HelloAccountComponent :name="'«Тайно дернул»'" />
         <div class="inner-container">
             <div class="title-add-container">
                 <h3 class="h3">Новости организации</h3>
-                <div class="add-btn">
+                <div @click="changeCondCreateModal" class="add-btn">
                     <img src="@/assets/images/icon/plus.svg" alt="">
                     Добавить
                 </div>
@@ -17,7 +19,7 @@
                     <div class="news__info">
                         <div class="news-info__item">{{ cur_news.organization.name }}</div>
                         <div class="news-info__item">{{ cur_news.date }}</div>
-                        <div class="news-info__item edit-event"><img src="@/assets/images/icon/edit.svg" alt=""></div>
+                        <div @click="changeCondRedactModal" class="news-info__item edit-event"><img src="@/assets/images/icon/edit.svg" alt=""></div>
                         <div class="news-info__item delete-event"><img src="@/assets/images/icon/close.svg" alt=""></div>
                     </div>
                 </router-link>
@@ -29,7 +31,20 @@
 <script setup lang="ts">
     import HeaderAdminComponent from "@/components/HeaderAdminComponent.vue";
     import HelloAccountComponent from "@/components/HelloAccountComponent.vue";
+    import ModalRedactComponent from "@/components/ModalRedactComponent.vue";
+    import ModalCreateComponent from "@/components/ModalCreateComponent.vue";
     import {ref} from 'vue';
+
+    const showRedactModal = ref(false);
+    const showCreateModal = ref(false);
+    function changeCondRedactModal(e) {
+        e.preventDefault();
+        showRedactModal.value = !showRedactModal.value;
+    }
+    function changeCondCreateModal(e) {
+        e.preventDefault();
+        showCreateModal.value = !showCreateModal.value;
+    }
 
     const buttons = [
         {
@@ -123,7 +138,8 @@
         outline: none;
     }
 
-    .news-info__item.delete-event > img {
+    .news-info__item.delete-event > img,
+    .news-info__item.edit-event > img {
         filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(257deg) brightness(102%) contrast(104%);
     }
     .title-add-container {
@@ -137,13 +153,12 @@
         gap: 7px;
         border-radius: 50px;
         padding: 10px 16px;
-        background-color: #000;
-        color: var(--colorWhite);
+        background-color: var(--colorBlueLight);
+        color: #000;
         cursor: pointer;
     }
     .add-btn > img {
-        width: 18px;
+        width: 20px;
         height: auto;
-        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(257deg) brightness(102%) contrast(104%);
     }
 </style>

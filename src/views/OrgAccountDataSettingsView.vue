@@ -75,7 +75,7 @@
         border-radius: 10px;
         border: solid #000 1px;
         padding: 10px;
-        background-color: #FFFFFF10;
+        background-color: #FFFFFF15;
         color: var(--colorWhite);
     }
     input:focus {
