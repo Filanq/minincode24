@@ -18,15 +18,6 @@
                     <router-link v-if="user.type === ''" :to="{name: 'registration'}" class="link header_link header-section-2" @click="getClickFromHeader($event, anchors.contactsAnch)" ref="contactsHeaderBtn">Регистрация</router-link>
                     <a v-if="user.type !== ''" href="#" @click.prevent="()=>{user.logout(); $router.push('/')}" class="link header_link header-section-2" @click="getClickFromHeader($event, anchors.contactsAnch)" ref="contactsHeaderBtn">Выход</a>
                 </div>
-                <span :class="{'open_burger_btn': isBurgerOpen}" class="burger_btn" @click="isBurgerOpen = !isBurgerOpen"></span>
-                <div :class="{'open_burger_menu': isBurgerOpen}" class="burger_menu grid grid-column gap-10">
-                    <router-link :to="{name: 'home'}" class="link header_link header-section-2">Главная</router-link>
-                    <router-link :to="{name: 'organizations'}" class="link header_link header-section-2">Организации</router-link>
-                    <router-link :to="{name: 'news'}" class="link header_link header-section-2">Новости</router-link>
-                    <router-link :to="{name: 'org_account_data_settings'}" class="link header_link header-section-2">Личный кабинет</router-link>
-                    <router-link :to="{name: 'registration'}" class="link header_link header-section-2">Регистрация</router-link>
-                    <router-link :to="{name: 'login'}" class="link header_link header-section-2">Вход</router-link>
-                </div>
             </nav>
         </div>
     </div>
