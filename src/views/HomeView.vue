@@ -66,9 +66,10 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('@/assets/images/bg.jpg');
-        background-position: center;
-        background-size: center;
+        background-image: url('@/assets/images/bg1.jpg');
+        background-position: center top;
+        background-size: cover;
+
         z-index: -1;
     }
 

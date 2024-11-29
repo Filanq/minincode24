@@ -4,7 +4,8 @@
         <div class="container skills__container">
             <div class="skills_block--sticky_parent">
                 <div class="skills_block skills_block--sticky">
-                    <h2 class="h2"><span class="blue h2">_</span>Направления <span class="h2 blue">&</span> Мероприятия</h2>
+                    <!-- <h2 class="h2"><span class="blue h2">_</span>Направления <span class="h2 blue">&</span> Мероприятия</h2> -->
+                    <h2 class="h2"><span class="blue h2">_</span>Направления</h2>
                     <div class="skills__inner">
                         <div class="grid grid-row gap-25 jc-c ai-c">
                             <div class="skills-inner__img_wrap">
@@ -14,7 +15,7 @@
                         </div>
                         <p class="skills-inner__text">{{ skill_active.description }}</p>
                     </div>
-                    <h3 class="h3">Направления</h3>
+                    <!-- <h3 class="h3">Направления</h3> -->
                     <div class="skills_wrap-skils">
                         <div @click="setActiveSkill(skills_datum.id)" class="skills_block-skils" :class="{'skills_block-skils_active': skill_active.id === skills_datum.id}" :key="skills_datum.id" v-for="skills_datum in skills_data">
                             <img :src="skills_datum.icon" :alt="skills_datum.title">
@@ -33,7 +34,7 @@
                         <div class="experience_description">
                             <h4 class="h4"><span class="blue">«</span> Python для начинающих <span class="blue">»</span></h4>
                             <p>Бесплатный онлайн-вебинар для школьников, где расскажут о возможностях языка Python и покажут, как начать писать код. Узнайте, почему Python стал одним из самых популярных языков программирования!</p>
-                            <router-link :to="{name: 'home'}" class="btn">Подробнее ></router-link>
+                            <router-link :to="{name: 'home'}" class="btn">Подробнее →</router-link>
                         </div>
                     </div>
                 </div>
@@ -41,9 +42,9 @@
                     <div class="experience">
                         <p>16 декабря</p>
                         <div class="experience_description">
-                            <h4 class="h4"><span class="blue">«</span> Основы кибербезопасности <span class="blue">»</span></h4>
+                            <h4 class="h4"><span class="blue exp_size">«</span> Основы кибербезопасности <span class="blue exp_size">»</span></h4>
                             <p>Практический семинар для студентов колледжей, посвященный вопросам защиты информации в интернете. Научитесь защищать свои данные и узнайте, как избежать распространенных угроз. </p>
-                            <router-link :to="{name: 'home'}" class="btn">Подробнее ></router-link>
+                            <router-link :to="{name: 'home'}" class="btn">Подробнее →</router-link>
                         </div>
                     </div>
                 </div>
@@ -51,9 +52,9 @@
                     <div class="experience">
                         <p>05 декабря</p>
                         <div class="experience_description">
-                            <h4 class="h4"><span class="blue">«</span> JavaScript: от простого к сложному <span class="blue">»</span></h4>
+                            <h4 class="h4"><span class="blue exp_size">«</span> JavaScript: от простого к сложному <span class="blue exp_size">»</span></h4>
                             <p>Онлайн-курс для школьников, желающих освоить один из самых востребованных языков фронтенд-разработки. Начните с азов и постепенно переходите к более сложным концепциям.</p>
-                            <router-link :to="{name: 'home'}" class="btn">Подробнее ></router-link>
+                            <router-link :to="{name: 'home'}" class="btn">Подробнее →</router-link>
                         </div>
                     </div>
                 </div>
@@ -61,9 +62,9 @@
                     <div class="experience">
                         <p>08 декабря</p>
                         <div class="experience_description">
-                            <h4 class="h4"><span class="blue">«</span> Конференция по искусственному интеллекту <span class="blue">»</span></h4>
+                            <h4 class="h4"><span class="blue exp_size">«</span> Конференция по искусственному интеллекту <span class="blue exp_size">»</span></h4>
                             <p>Встреча экспертов и энтузиастов AI, где обсудим последние достижения и перспективы применения технологий искусственного интеллекта. Участие бесплатное, регистрация обязательна. </p>
-                            <router-link :to="{name: 'home'}" class="btn">Подробнее ></router-link>
+                            <router-link :to="{name: 'home'}" class="btn">Подробнее →</router-link>
                         </div>
                     </div>
                 </div>
@@ -91,7 +92,7 @@
             { id: 4, title: 'Мобильная разработка;', icon: '/skills/mobile.svg', description: 'Для любителей компьютерных игр, желающих попробовать себя в создании собственных проектов. Курс сочетает творчество и технические аспекты разработки игр.' },
             { id: 5, title: 'Системное администрирование', icon: '/skills/secure-shield.svg', description: 'Обучает навыкам работы с компьютерным и сетевым оборудованием, установке операционной системы и устранению неисправностей. Программа полезна для тех, кто хочет лучше понимать устройство компьютеров' },
             { id: 6, title: 'Программирование на Scratch', icon: '/skills/scratch.svg', description: 'Дети осваивают визуальное программирование через игровые задания, развивая логику и креативность. Итогом становится собственная игра, мультфильм или интерактивная книга.' },
-            { id: 7, title: 'Основы программирования на языке С++', icon: '/skills/marketing.svg', description: 'Изучение одного из старейших и наиболее мощных языков программирования. Курс подходит для начинающих программистов, заинтересованных в создании сложных программных продуктов.' },
+            { id: 7, title: 'Программирования на языке С++', icon: '/skills/marketing.svg', description: 'Изучение одного из старейших и наиболее мощных языков программирования. Курс подходит для начинающих программистов, заинтересованных в создании сложных программных продуктов.' },
             { id: 8, title: 'Искусственный интеллект ', icon: '/skills/AI.svg', description: 'Введение в основы ИИ, включая знакомство с ключевыми технологиями и использованием Python для практических задач. Подходит для подростков, увлеченных современными технологиями.' },
             { id: 9, title: 'Графический дизайн', icon: '/skills/dexign.svg', description: 'Осваиваются инструменты для создания графики, таких как векторные и растровые редакторы. Учащиеся разрабатывают элементы фирменного стиля, упаковки и верстки.' },
             { id: 10, title: 'Веб-технологии', icon: '/skills/web.svg', description: 'Участники изучают инструменты для дизайна и верстки веб-сайтов, такие как Photoshop, Illustrator, Figma и другие. Они учатся создавать макеты, адаптивные дизайны и анимации.' }
@@ -228,6 +229,10 @@
     }
     .skills-inner__text{
         font-size: 20px;
+    }
+
+    .exp_size{
+        font-size: inherit;
     }
 
     @media(max-width: 1280px){

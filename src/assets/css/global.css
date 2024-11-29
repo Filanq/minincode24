@@ -115,7 +115,7 @@ header{
     border-radius: 200px;
     background-color: var(--colorBlueMain);
     color: white;
-    font-weight: 700;
+    /* font-weight: 700; */
     font-size: 18px;
     width: fit-content;
     text-decoration: none;

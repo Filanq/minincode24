@@ -25,7 +25,7 @@
                         <p>Партнеров</p>
                     </div>                
                 </div>
-                <a target="_blank" data-aos="fade-up" class="btn" href="https://vk.com/jun48?from=search">Наша ссылка →</a>
+                <a target="_blank" data-aos="fade-up" class="btn" href="https://vk.com/jun48?from=search">Подробнее →</a>
             </div>
         </div>
     </div>
@@ -82,7 +82,7 @@ window.addEventListener("scroll", (e) => {
         width: 400px;
         height: 480px;
         background-color: var(--colorBlueMain);
-        border-radius: 80px;
+        border-radius: 40px;
         position: relative;
         overflow: hidden;
     }
@@ -122,13 +122,25 @@ window.addEventListener("scroll", (e) => {
         .about-us__container{
             gap: 40px;
             grid-template-columns: 1fr;  
+            justify-items: left;
+        }
+
+        .about-us_img-wrap{
+            width: 320px;
+            height: 420px;
+        }
+
+        .about-us__result-wrap{
+            justify-content: flex-start;
+        }
+
+        .about-us__result-block{
+            margin-right: 40px;
         }
 
         .about-us__main-wrap__gear{
             display: none;
-        }
-
-        
+        }        
     }
 
     @media(max-width: 768px){
