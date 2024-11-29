@@ -37,4 +37,9 @@
         object-position: center;
     }
 
+    @media(max-width: 768px){
+        .card__wrap{
+            grid-template-columns: 1fr;
+        }
+    }
 </style>
