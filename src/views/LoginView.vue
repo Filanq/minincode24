@@ -2,7 +2,7 @@
     <main>
         <section class="left-part">
             <div class="inner-container">
-                <h2 class="h1">Вход</h2>
+                <h2 class="h3">Вход</h2>
                 <p class="mini-text">Еще нет аккаунта? <router-link :to="{name: 'registration'}">Регистрация</router-link></p>
                 <form class="form-container">
                     <label>
@@ -41,7 +41,7 @@ main {
     width: 50%;
     max-width: 600px;
     height: 100%;
-    background-color: var(--colorWhite);
+    background-color: var(--colorGrey);
     padding: 30px;
 }
 .left-part > .inner-container {
@@ -51,7 +51,7 @@ main {
 .right-part {
     flex-grow: 1;
     height: 100%;
-    background-color: var(--colorGrey);
+    background-color: var(--colorWhite);
 }
 .right-part > img {
     width: 100%;
@@ -109,9 +109,10 @@ input:focus {
 }
 button {
     padding: 16px 28px;
-    background-color: #000;
+    background-color: var(--colorBlueLight);
     border-radius: 200px;
     border: none;
+    color: #000;
     cursor: pointer;
 }
 </style>

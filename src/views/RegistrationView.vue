@@ -2,7 +2,7 @@
     <main>
         <section class="left-part">
             <div class="inner-container">
-                <h1 class="h1">Регистрация</h1>
+                <h1 class="h3">Регистрация</h1>
                 <p class="mini-text">Уже есть аккаунт? <router-link :to="{name: 'login'}" class="link">Войти</router-link></p>
                 <form v-if="formType == 'user'" class="form-container">
                     <label>
@@ -85,7 +85,7 @@ main {
     align-items: center;
     width: 50%;
     height: 100%;
-    background-color: var(--colorWhite);
+    background-color: var(--colorGrey);
     padding: 30px;
 }
 .left-part > .inner-container {
@@ -95,7 +95,7 @@ main {
 .right-part {
     width: 50%;
     height: 100%;
-    background-color: var(--colorGrey);
+    background-color: var(--colorWhite);
 }
 .right-part > img {
     width: 100%;
@@ -108,6 +108,7 @@ main {
 }
 .left-part .mini-text > a {
     font-weight: 500;
+    color: var(--colorBlueLight);
 }
 .select-formType-container {
     display: flex;
@@ -122,11 +123,12 @@ main {
     padding: 10px;
     border-radius: 7px;
     background-color: var(--colorGrey);
-    transition: background-color .3s ease;
+    transition: all .3s ease;
     cursor: pointer;
 }
 .selected-formType-btn {
     background-color: var(--colorBlueLight)!important;
+    color: #000;
 }
 form {
     display: flex;
@@ -153,10 +155,10 @@ input:focus {
 }
 button {
     padding: 16px 28px;
-    background-color: #000;
+    background-color: var(--colorBlueLight);
     border-radius: 200px;
     border: none;
-    color: var(--colorWhite);
+    color: #000;
     cursor: pointer;
 }
 </style>
