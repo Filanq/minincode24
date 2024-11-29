@@ -25,7 +25,7 @@
                         <p>Партнеров</p>
                     </div>                
                 </div>
-                <a target="_blank" data-aos="fade-up" class="btn" href="https://vk.com/jun48?from=search">Подробнее →</a>
+                <a target="_blank" data-aos="fade-up" class="btn" href="https://vk.com/minincode">Подробнее →</a>
             </div>
         </div>
     </div>

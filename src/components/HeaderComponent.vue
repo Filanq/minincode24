@@ -14,7 +14,7 @@
                     <router-link :to="{name: 'login'}" class="link header_link header-section-2">Вход</router-link>
                 </div>
                 <span :class="{'open_burger_btn': isBurgerOpen}" class="burger_btn" @click="isBurgerOpen = !isBurgerOpen"></span>
-                <div :class="{'open_burger_menu': isBurgerOpen}" class="burger_menu grid grid-column gap-25">
+                <div :class="{'open_burger_menu': isBurgerOpen}" class="burger_menu grid grid-column gap-10">
                     <router-link :to="{name: 'home'}" class="link header_link header-section-2">Главная</router-link>
                     <router-link :to="{name: 'organizations'}" class="link header_link header-section-2">Организации</router-link>
                     <router-link :to="{name: 'news'}" class="link header_link header-section-2">Новости</router-link>

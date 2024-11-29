@@ -34,7 +34,7 @@
                         <div class="experience_description">
                             <h4 class="h4"><span class="blue">«</span> Python для начинающих <span class="blue">»</span></h4>
                             <p>Бесплатный онлайн-вебинар для школьников, где расскажут о возможностях языка Python и покажут, как начать писать код. Узнайте, почему Python стал одним из самых популярных языков программирования!</p>
-                            <router-link :to="{name: 'home'}" class="btn">Подробнее →</router-link>
+                            <router-link :to="{name: 'news'}" class="btn">Подробнее →</router-link>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                         <div class="experience_description">
                             <h4 class="h4"><span class="blue exp_size">«</span> Основы кибербезопасности <span class="blue exp_size">»</span></h4>
                             <p>Практический семинар для студентов колледжей, посвященный вопросам защиты информации в интернете. Научитесь защищать свои данные и узнайте, как избежать распространенных угроз. </p>
-                            <router-link :to="{name: 'home'}" class="btn">Подробнее →</router-link>
+                            <router-link :to="{name: 'news'}" class="btn">Подробнее →</router-link>
                         </div>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
                         <div class="experience_description">
                             <h4 class="h4"><span class="blue exp_size">«</span> JavaScript: от простого к сложному <span class="blue exp_size">»</span></h4>
                             <p>Онлайн-курс для школьников, желающих освоить один из самых востребованных языков фронтенд-разработки. Начните с азов и постепенно переходите к более сложным концепциям.</p>
-                            <router-link :to="{name: 'home'}" class="btn">Подробнее →</router-link>
+                            <router-link :to="{name: 'news'}" class="btn">Подробнее →</router-link>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                         <div class="experience_description">
                             <h4 class="h4"><span class="blue exp_size">«</span> Конференция по искусственному интеллекту <span class="blue exp_size">»</span></h4>
                             <p>Встреча экспертов и энтузиастов AI, где обсудим последние достижения и перспективы применения технологий искусственного интеллекта. Участие бесплатное, регистрация обязательна. </p>
-                            <router-link :to="{name: 'home'}" class="btn">Подробнее →</router-link>
+                            <router-link :to="{name: 'news'}" class="btn">Подробнее →</router-link>
                         </div>
                     </div>
                 </div>
