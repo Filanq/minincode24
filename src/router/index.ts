@@ -12,6 +12,7 @@ import OrgAccountDataSettingsView from '@/views/OrgAccountDataSettingsView.vue';
 import OrgAccountEventsView from '@/views/OrgAccountEventsView.vue';
 import OrgAccountNewsView from '@/views/OrgAccountNewsView.vue';
 import OrgAccountGuestsView from '@/views/OrgAccountGuestsView.vue';
+import CardNewsViews from '@/views/CardNewsViews.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -97,6 +98,11 @@ const router = createRouter({
       path: '/events',
       name: 'events',
       component: EventsView,
+    },
+    {
+      path: '/events-card',
+      name: 'events_card',
+      component: CardNewsViews,
     }
   ],
 });
