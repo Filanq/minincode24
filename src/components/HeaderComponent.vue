@@ -15,14 +15,13 @@
                     <a class="link header_link header-section-2" @click="getClickFromHeader($event, anchors.projectsAnch)" ref="projectsHeaderBtn" href="#projects">Проекты</a>
                     <a class="link header_link header-section-2" @click="getClickFromHeader($event, anchors.contactsAnch)" ref="contactsHeaderBtn" href="#contacts">Контакты</a>
                 </div>
-                <span class="burger_btn" @click="isBurgerOpen = true"></span>
-                <div class="burger_menu grid grid-column gap-25">
+                <span :class="{'open_burger_btn': isBurgerOpen}" class="burger_btn" @click="isBurgerOpen = !isBurgerOpen"></span>
+                <div :class="{'open_burger_menu': isBurgerOpen}" class="burger_menu grid grid-column gap-25">
                     <router-link :to="{name: 'home'}">Home</router-link>
                     <router-link :to="{name: 'home'}">Home</router-link>
                     <router-link :to="{name: 'home'}">Home</router-link>
                     <router-link :to="{name: 'home'}">Home</router-link>
                     <router-link :to="{name: 'home'}">Home</router-link>
-                    <div class="cross" @click="isBurgerOpen = false"></div>
                 </div>
             </nav>
         </div>
@@ -141,7 +140,7 @@
         addEventListener("resize", () => setHeaderCursor(activeBtn.value));
     })
 
-    let isBurgerOpen = ref(false)
+    let isBurgerOpen = ref(false);
 
     // defineProps()
 </script>
@@ -155,7 +154,7 @@
     }
     .header_nav{
         padding: 8px 10px ;
-        background-color: rgb(166, 166, 166);
+        background-color: var(--colorBlueLight);
         border-radius: 100px;
         display: flex;
         justify-content: space-between;
@@ -164,7 +163,8 @@
         width: 100%;
     }
 
-    .header_nav div{
+    .header_nav div:nth-child(1),
+    .header_nav div:nth-child(3){
         display: flex;
         gap: 20px;
     }
@@ -175,10 +175,13 @@
         padding: 10px 24px;
         border-radius: 50px;
         z-index: 2;
+        transition: all .2s ease;
+        white-space: nowrap;
     }
 
-    .header_link--active{
-        background-color: var(--colorBlue);
+    .header_link:hover{
+        background-color: var(--colorBlueMain);
+        color: var(--colorWhite);
     }
 
     .header_link--logo{
@@ -222,7 +225,8 @@
         /* width: 129px; */
         height: 41px;
         border-radius: 50px;
-        background-color: #0069ff;
+        /* background-color: #0069ff; */
+        background-color: #00000000;
         z-index: 1;
         transition: opacity .3s cubic-bezier(.5, 0, .5, 0), left .3s ease-in-out, width .3s ease-in-out, height .3s ease-in-out;
     }
@@ -251,15 +255,21 @@
 
     .burger_btn{
         display: none;
-        background-image: url('../assets/images/icon/cross.png');
-        width: 50px;
-        height: 50px;
+        background-image: url('../assets/images/icon/burger.svg');
+        width: 30px;
+        height: auto;
+        padding: 10px;
         background-position: center;
-        background-size: cover
+        background-size: cover;
+        cursor: pointer;
+    }
+
+    .open_burger_btn {
+        background-image: url('../assets/images/icon/close.svg');
     }
 
     .burger_menu{
-        display: none !important;
+        display: none;
         position: relative;
     }
 
@@ -268,32 +278,29 @@
             display: block;
         }
 
-        .header_nav div{
+        .header_nav div:nth-child(1),
+        .header_nav div:nth-child(3){
             display: none;
         }
 
         .burger_menu{
-            display: grid !important;
+            display: none;
             position: absolute;
             right: 0;
-            top: 0;
+            top: 80px;
             padding: 20px;
-            padding-top: 80px;
             border-radius: 20px;
-            background-color: #a6a6a6;
-            margin-top: 20px;
-            margin-right: 20px;
+            background-color: var(--colorBlueLight);
+            margin-right: 25px;
         }
 
-        .cross{
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-image: url('../assets/images/icon/burger.png');
-            width: 50px;
-            height: 50px;
-            background-position: center;
-            background-size: cover
+        .burger_menu > a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .open_burger_menu {
+            display: grid;
         }
     }
 </style>
