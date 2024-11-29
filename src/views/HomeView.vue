@@ -8,9 +8,9 @@
         <div class="banner__gradient"></div>
     </div>
 
-    <MarqueComponent/>
+    <MarqueComponent />
 
-    <about-component/>
+    <about-component />
 
     <DirectionsComponent/>
 

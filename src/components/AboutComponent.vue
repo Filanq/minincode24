@@ -1,6 +1,6 @@
 <template>
     <span ref="aboutAnch" class="anchor"></span>
-    <div class="section about-us__section">
+    <div id="about" class="section about-us__section">
         <div class="container about-us__container">
             <div class="about-us_img-wrap" data-aos="fade-right">
                 <img src="../assets/images/about.jpg" alt="img">

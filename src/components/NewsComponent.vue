@@ -1,5 +1,5 @@
 <template>
-    <section class="section news__section">
+    <section id="news" class="section news__section">
         <div class="container news__container">
             <h2 class="h2"><span class="blue h2">_</span>Новости</h2>
             <div class="news__main_wrap">

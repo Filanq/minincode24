@@ -1,6 +1,6 @@
 <template>
     <!-- у меня и опыт -->
-    <div class="section skills__section">
+    <div id="direction" class="section skills__section">
         <div class="container skills__container">
             <div class="skills_block--sticky_parent">
                 <div class="skills_block skills_block--sticky">

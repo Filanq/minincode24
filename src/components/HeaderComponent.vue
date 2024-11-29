@@ -3,25 +3,24 @@
         <div class="container header__container">
             <nav class="header_nav" :class="{'header_nav--open': isBurgerOpen}">
                 <div>
-                    <span class="header-cursor" :class="{hideHeaderCursor: !headerCursor1.active}" :style="{ width: `${headerCursor1.width}px`, height: `${headerCursor1.height}px`, left: `${headerCursor1.left}px` }"></span>
-                    <a class="link header_link header-section-1" @click="getClickFromHeader($event, anchors.homeAnch)" ref="homeHeaderBtn" href="#home">Главная</a>
-                    <a class="link header_link header-section-1" @click="getClickFromHeader($event, anchors.aboutAnch)" ref="aboutHeaderBtn" href="#about">О нас</a>
-                    <a class="link header_link header-section-1" @click="getClickFromHeader($event, anchors.resumeAnch)" ref="resumeHeaderBtn" href="#resume">Резюме</a>
+                    <router-link :to="{name: 'home'}" class="link header_link header-section-2">Главная</router-link>
+                    <router-link :to="{name: 'organizations'}" class="link header_link header-section-2">Организации</router-link>
+                    <router-link :to="{name: 'news'}" class="link header_link header-section-2">Новости</router-link>
                 </div>
                 <a class="link header_link--logo" href="#">MininCode</a>
                 <div>
-                    <span class="header-cursor" :class="{hideHeaderCursor: !headerCursor2.active}" :style="{ width: `${headerCursor2.width}px`, height: `${headerCursor2.height}px`, left: `${headerCursor2.left}px` }"></span>
-                    <a class="link header_link header-section-2" @click="getClickFromHeader($event, anchors.historyAnch)" ref="historyHeaderBtn" href="#history">Истоки</a>
-                    <a class="link header_link header-section-2" @click="getClickFromHeader($event, anchors.projectsAnch)" ref="projectsHeaderBtn" href="#projects">Проекты</a>
-                    <a class="link header_link header-section-2" @click="getClickFromHeader($event, anchors.contactsAnch)" ref="contactsHeaderBtn" href="#contacts">Контакты</a>
+                    <router-link :to="{name: 'org_account_data_settings'}" class="link header_link header-section-2">Личный кабинет</router-link>
+                    <router-link :to="{name: 'registration'}" class="link header_link header-section-2">Регистрация</router-link>
+                    <router-link :to="{name: 'login'}" class="link header_link header-section-2">Вход</router-link>
                 </div>
                 <span :class="{'open_burger_btn': isBurgerOpen}" class="burger_btn" @click="isBurgerOpen = !isBurgerOpen"></span>
                 <div :class="{'open_burger_menu': isBurgerOpen}" class="burger_menu grid grid-column gap-25">
-                    <router-link :to="{name: 'home'}">Home</router-link>
-                    <router-link :to="{name: 'home'}">Home</router-link>
-                    <router-link :to="{name: 'home'}">Home</router-link>
-                    <router-link :to="{name: 'home'}">Home</router-link>
-                    <router-link :to="{name: 'home'}">Home</router-link>
+                    <router-link :to="{name: 'home'}" class="link header_link header-section-2">Главная</router-link>
+                    <router-link :to="{name: 'organizations'}" class="link header_link header-section-2">Организации</router-link>
+                    <router-link :to="{name: 'news'}" class="link header_link header-section-2">Новости</router-link>
+                    <router-link :to="{name: 'org_account_data_settings'}" class="link header_link header-section-2">Личный кабинет</router-link>
+                    <router-link :to="{name: 'registration'}" class="link header_link header-section-2">Регистрация</router-link>
+                    <router-link :to="{name: 'login'}" class="link header_link header-section-2">Вход</router-link>
                 </div>
             </nav>
         </div>
