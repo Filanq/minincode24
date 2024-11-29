@@ -4,17 +4,20 @@
         <div class="container skills__container">
             <div class="skills_block--sticky_parent">
                 <div class="skills_block skills_block--sticky">
-                    <h2 class="h2"><span class="blue h2">_</span>Компетенци <span class="h2 blue">&</span> Мероприятия</h2>
+                    <h2 class="h2"><span class="blue h2">_</span>Направления <span class="h2 blue">&</span> Мероприятия</h2>
                     <div class="skills__inner">
-                        <div class="skills-inner__img_wrap">
-                            <img class="skills-inner__img" :src="`/img/skills/${skill_active.icon}`" :alt="skill_active.title">
+                        <div class="grid grid-row gap-25 jc-c ai-e">
+                            <div class="skills-inner__img_wrap">
+                                <img class="skills-inner__img" :src="skill_active.icon" :alt="skill_active.title">
+                            </div>
+                            <h4 class="h4">{{ skill_active.title }}</h4>
                         </div>
                         <p class="skills-inner__text">{{ skill_active.description }}</p>
                     </div>
-                    <h3 class="h3">Компетенци</h3>
+                    <h3 class="h3">Направления</h3>
                     <div class="skills_wrap-skils">
                         <div @click="setActiveSkill(skills_datum.id)" class="skills_block-skils" :class="{'skills_block-skils_active': skill_active.id === skills_datum.id}" :key="skills_datum.id" v-for="skills_datum in skills_data">
-                            <img :src="`/img/skills/${skills_datum.icon}`" :alt="skills_datum.title">
+                            <img :src="skills_datum.icon" :alt="skills_datum.title">
                         </div>
                     </div>
                 </div>
@@ -26,46 +29,41 @@
                 </div>
                 <div class="skills_block-experience">
                     <div class="experience">
-                        <p>25.11.2023</p>
+                        <p>07 декабря</p>
                         <div class="experience_description">
-                            <h4 class="h4"><span class="blue">«</span> Minin Code <span class="blue">»</span> - 1 место</h4>
-                            <p>Участники хакатона "Минин Code" представляют собой молодых программистов в возрасте от 12 до 18 лет. Участие в мероприятии позволяет им демонстрировать профессиональные навыки, расширять сеть контактов и набираться опыта в командной работе.</p>
+                            <h4 class="h4"><span class="blue">«</span> Python для начинающих <span class="blue">»</span></h4>
+                            <p>Бесплатный онлайн-вебинар для школьников, где расскажут о возможностях языка Python и покажут, как начать писать код. Узнайте, почему Python стал одним из самых популярных языков программирования!</p>
+                            <router-link :to="{name: 'home'}" class="btn">Подробнее ></router-link>
                         </div>
                     </div>
                 </div>
                 <div class="skills_block-experience">
                     <div class="experience">
-                        <p>17.12.2023</p>
+                        <p>16 декабря</p>
                         <div class="experience_description">
-                            <h4 class="h4"><span class="blue">«</span> Taskills <span class="blue">»</span> - 1 место</h4>
-                            <p>Всероссийский хакатон по информационным технологиям «TASKILLS» для учащихся образовательных учреждений (от 12 до 18 лет) в дистанционном формате и в два этапа: отборочный и финальный!</p>
+                            <h4 class="h4"><span class="blue">«</span> Основы кибербезопасности <span class="blue">»</span></h4>
+                            <p>Практический семинар для студентов колледжей, посвященный вопросам защиты информации в интернете. Научитесь защищать свои данные и узнайте, как избежать распространенных угроз. </p>
+                            <router-link :to="{name: 'home'}" class="btn">Подробнее ></router-link>
                         </div>
                     </div>
                 </div>
                 <div class="skills_block-experience">
                     <div class="experience">
-                        <p>24.08.2024</p>
+                        <p>05 декабря</p>
                         <div class="experience_description">
-                            <h4 class="h4"><span class="blue">«</span> ИТ вызов <span class="blue">»</span> - 1 место</h4>
-                            <p>Оффлайн хакатон для школьников и студентов в городе Ижевск. Возраст участников Хакатона: 15-20 лет включительно (на момент времени проведения мероприятия), которые интересуются сферой информационных технологий, имеют опыт в разработке сайтов и мобильных приложений.</p>
+                            <h4 class="h4"><span class="blue">«</span> JavaScript: от простого к сложному <span class="blue">»</span></h4>
+                            <p>Онлайн-курс для школьников, желающих освоить один из самых востребованных языков фронтенд-разработки. Начните с азов и постепенно переходите к более сложным концепциям.</p>
+                            <router-link :to="{name: 'home'}" class="btn">Подробнее ></router-link>
                         </div>
                     </div>
                 </div>
                 <div class="skills_block-experience">
                     <div class="experience">
-                        <p>31.08.2024</p>
+                        <p>08 декабря</p>
                         <div class="experience_description">
-                            <h4 class="h4"><span class="blue">«</span> Про IT <span class="blue">»</span> - 1 место</h4>
-                            <p>Цель Хакатона – погружение школьников в процесс профессионального самоопределения с учетом стратегии социальноэкономического развития Липецкой области. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="skills_block-experience">
-                    <div class="experience">
-                        <p>02.11.2024</p>
-                        <div class="experience_description">
-                            <h4 class="h4"><span class="blue">«</span> Digital Code <span class="blue">»</span> - 1 место</h4>
-                            <p>Целью проведения Хакатона является популяризация технической направленности основного и дополнительного образования для школьников, науки и знаний в области современных технологий в Липецкой области.</p>
+                            <h4 class="h4"><span class="blue">«</span> Конференция по искусственному интеллекту <span class="blue">»</span></h4>
+                            <p>Встреча экспертов и энтузиастов AI, где обсудим последние достижения и перспективы применения технологий искусственного интеллекта. Участие бесплатное, регистрация обязательна. </p>
+                            <router-link :to="{name: 'home'}" class="btn">Подробнее ></router-link>
                         </div>
                     </div>
                 </div>
@@ -87,23 +85,16 @@
     // Function For Future Backend
     const getSkillsData = (): void => {
         skills_data.value = [
-            { id: 1, title: 'Git', icon: 'skills_logo_5.png', description: 'Git — это система управления версиями с распределённой архитектурой' },
-            { id: 2, title: 'NodeJS', icon: 'skills_logo_3.png', description: 'Node.js — это платформа с открытым исходным кодом для работы с языком JavaScript.' },
-            { id: 3, title: 'Python', icon: 'skills_logo_4.png', description: 'Python — это высокоуровневый язык программирования общего назначения с динамической строгой типизацией и автоматическим управлением памятью.' },
-            { id: 4, title: 'Django', icon: 'skills_logo_1.png', description: 'Django — это бесплатный высокоуровневый фреймворк с открытым исходным кодом, предназначенный для создания приложений на языке Python. Его основная цель — помочь разработчикам быстро и безопасно создавать серверную часть сайтов.' },
-            { id: 5, title: 'JavaScript', icon: 'skills_logo_16.png', description: 'JavaScript — это язык программирования, который используется для создания интерактивных и динамических веб-сайтов' },
-            { id: 6, title: 'JQuery', icon: 'skills_logo_2.png', description: 'jQuery — это быстрая, небольшая и богатая функциями JavaScript-библиотека, предназначенная для упрощения написания скриптов на языке JavaScript.' },
-            { id: 7, title: 'TypeScript', icon: 'skills_logo_17.png', description: 'TypeScript — это язык программирования для веб-разработки, основанный на JavaScript. Он делает код понятнее и надёжнее, добавляет статическую типизацию (переменные привязаны к конкретным типам данных).' },
-            { id: 8, title: 'Vue.js', icon: 'skills_logo_14.png', description: 'Vue.js — это прогрессивный JavaScript-фреймворк для разработки сайтов и веб-приложений, написанный на JavaScript' },
-            { id: 9, title: 'Laravel', icon: 'skills_logo_12.png', description: 'Laravel — бесплатный PHP-фреймворк с открытым исходным кодом, специально разработанный для создания сложных сайтов и веб-приложений.' },
-            { id: 10, title: 'HTML', icon: 'skills_logo_10.png', description: 'HTML — это язык гипертекстовой разметки, который лежит в основе веб-разработки и помогает упорядочивать содержимое веб-страниц.' },
-            { id: 11, title: 'CSS', icon: 'skills_logo_11.png', description: 'CSS — это каскадные таблицы стилей, язык описания внешнего вида HTML-документа.' },
-            { id: 12, title: 'REST API', icon: 'skills_logo_18.png', description: 'REST API — это архитектурный стиль взаимодействия компонентов распределённой системы, который используют для передачи данных между сервером и клиентом.' },
-            { id: 13, title: 'PHP', icon: 'skills_logo_15.png', description: 'PHP — это скриптовый язык программирования. Имеет открытый исходный код. Изначально создавался для разработки веб-приложений, но в процессе обновлений стал языком общего назначения.' },
-            { id: 14, title: 'MySQL', icon: 'skills_logo_9.png', description: 'MySQL — это система управления реляционными базами данных (СУРБД).' },
-            { id: 15, title: 'Docker', icon: 'skills_logo_8.png', description: 'Docker — это платформа контейнеризации с открытым исходным кодом, с помощью которой можно автоматизировать создание приложений, их доставку и управление.' },
-            { id: 16, title: 'Figma', icon: 'skills_logo_7.png', description: 'Figma — онлайн-сервис для веб-дизайна. В нём можно отрисовать иллюстрации и элементы интерфейса, создать интерактивный макет сайта, прототип приложения или векторную графику.' },
-            { id: 17, title: 'Photoshop', icon: 'skills_logo_6.png', description: 'Photoshop — многофункциональный графический редактор. Позволяет обрабатывать фото, создавать иллюстрации, прототипы и макеты для веб-дизайна, несложные анимации и многое другое.' }
+            { id: 1, title: 'Разработка VR/AR-приложений', icon: 'skills/vr-goggles.svg', description: 'Погружает участников в мир виртуальной реальности, где они учатся создавать и управлять своими собственными 3D-средами. Используется современное программное обеспечение и технические средства.' },
+            { id: 2, title: 'Программирование роботов', icon: '/skills/roboto.svg', description: 'Программа раскрывает творческий потенциал детей, помогает понять окружающий мир и стимулирует интерес к техническим профессиям. Участники учатся конструировать и программировать роботов.' },
+            { id: 3, title: 'Программирование на Python', icon: '/skills/3d.svg', description: 'Курс посвящен изучению популярного языка Python, который используется во многих отраслях, от веб-разработки до машинного обучения. Рассматриваются основные преимущества языка и его применение.' },
+            { id: 4, title: 'Мобильная разработка;', icon: '/skills/mobile.svg', description: 'Для любителей компьютерных игр, желающих попробовать себя в создании собственных проектов. Курс сочетает творчество и технические аспекты разработки игр.' },
+            { id: 5, title: 'Системное администрирование', icon: '/skills/secure-shield.svg', description: 'Обучает навыкам работы с компьютерным и сетевым оборудованием, установке операционной системы и устранению неисправностей. Программа полезна для тех, кто хочет лучше понимать устройство компьютеров' },
+            { id: 6, title: 'Программирование на Scratch', icon: '/skills/scratch.svg', description: 'Дети осваивают визуальное программирование через игровые задания, развивая логику и креативность. Итогом становится собственная игра, мультфильм или интерактивная книга.' },
+            { id: 7, title: 'Основы программирования на языке С++', icon: '/skills/marketing.svg', description: 'Изучение одного из старейших и наиболее мощных языков программирования. Курс подходит для начинающих программистов, заинтересованных в создании сложных программных продуктов.' },
+            { id: 8, title: 'Искусственный интеллект ', icon: '/skills/AI.svg', description: 'Введение в основы ИИ, включая знакомство с ключевыми технологиями и использованием Python для практических задач. Подходит для подростков, увлеченных современными технологиями.' },
+            { id: 9, title: 'Графический дизайн', icon: '/skills/dexign.svg', description: 'Осваиваются инструменты для создания графики, таких как векторные и растровые редакторы. Учащиеся разрабатывают элементы фирменного стиля, упаковки и верстки.' },
+            { id: 10, title: 'Веб-технологии', icon: '/skills/web.svg', description: 'Участники изучают инструменты для дизайна и верстки веб-сайтов, такие как Photoshop, Illustrator, Figma и другие. Они учатся создавать макеты, адаптивные дизайны и анимации.' }
         ];
 
         // Set Active Skill
@@ -168,16 +159,19 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 1px;
-        height: 1px;
-        border-radius: 50%;
+        width: 0px;
+        height: 0px;
+        border-radius: 18px;
         background: var(--colorBlueMain);
         transition: .5s;
         z-index: 2;
     }
     
     .skills_block-skils:hover::before, .skills_block-skils_active::before {
-        transform: scale(100);
+        width: 130%;
+        height: 130%;
+        top: -10px;
+        left: -10px;
         transition: .5s;
     }
 
@@ -199,7 +193,7 @@
     .experience_description{
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
     }
 
     .experience > p{
