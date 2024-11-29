@@ -15,9 +15,16 @@
     <DirectionsComponent/>
 
     <NewsComponent/>
+
+    <div class="section">
+        <div class="container footer__container grid">
+            <h3 class="h2">Спасибо MininCode</h3>
+            <p>Проект создан в рамках Всероссийского научно-технического хакатона по программированию MininCode силами команды CodeMakers. Наша команда в составе Федосенко Илья, Черных Владислав и Утяцкий Владислав, узнали много нового в сфере веб-технологий, закрепили имеющиеся навыки работы с фреймворками и получили ценный опыт командной работы. 😊</p>
+        </div>
+    </div>
 </template>
 
-<script setup>
+<script setup>  
     import MarqueComponent from '@/components/MarqueComponent.vue';
     import HeaderComponent from '@/components/HeaderComponent.vue';
     import AboutComponent from '@/components/AboutComponent.vue';
@@ -87,6 +94,16 @@
     .banner__container > * {
         z-index: 2;
         text-shadow: 1px 1px 2px var(--colorBlueMain);
+    }
+
+    .footer__container{
+        grid-auto-columns: 1fr 1fr;
+        grid-auto-rows: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer__container > p{
+        grid-area: 2 / 2;
     }
     
 </style>
