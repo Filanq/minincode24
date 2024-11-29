@@ -8,8 +8,8 @@ class User(models.Model):
     email = models.EmailField(max_length=100, null=False, unique=True)
     password = models.CharField(max_length=250, null=False)
     type = models.CharField(max_length=100, null=False, default='user')
-    name = models.CharField(max_length=250, null=True, unique=True)
-    address = models.CharField(max_length=250, null=True, unique=True)
+    name = models.CharField(max_length=250, null=True)
+    address = models.CharField(max_length=250, null=True)
     website = models.CharField(max_length=250, null=True)
     verified = models.BooleanField(default=False)
 
@@ -35,7 +35,6 @@ class Event(models.Model):
 class EventRequest(models.Model):
     user = models.ForeignKey(to=User, on_delete=models.CASCADE, null=True)
     event = models.ForeignKey(to=Event, on_delete=models.CASCADE, null=True)
-    verified = models.BooleanField(default=False)
 
 
 class Organization(models.Model):

@@ -2,10 +2,10 @@ from django.shortcuts import render, HttpResponse
 from rest_framework import viewsets
 from .permissions import NewsAdmin, Any, EventsAdmin, Admin
 from django.contrib.auth.hashers import make_password, check_password
-from .models import User, News, Event
+from .models import User, News, Event, EventRequest, Organization
 import json
 from django.views.decorators.csrf import csrf_exempt
-from .serializers import NewsSerializer, EventsSerializer, UsersSerializer
+from .serializers import NewsSerializer, EventsSerializer, UsersSerializer, EventRequestsSerializer, OrganizationSerializer
 
 
 # News List
@@ -38,13 +38,33 @@ class UsersList(viewsets.ModelViewSet):
             return [Any()]
         return [Admin()]
 
+# Users List
+class OrganizationList(viewsets.ModelViewSet):
+    queryset = Organization.objects.all()
+    serializer_class = OrganizationSerializer
+
+    def get_permissions(self):
+        if self.action in ['list', 'retrieve']:
+            return [Any()]
+        return [Admin()]
+
+# Event Requests List
+class EventRequestsList(viewsets.ModelViewSet):
+    queryset = EventRequest.objects.all()
+    serializer_class = EventRequestsSerializer
+
+    def get_permissions(self):
+        if self.action in ['list', 'retrieve']:
+            return [Any()]
+        return [Admin()]
+
 # Index View
 def index(request):
     return render(request, "main/dist/index.html")
 
 
 # Login View
-@csrf_exempt
+
 def login(request):
     if request.method == 'POST':
         data = str(request.body, 'utf-8')
@@ -63,6 +83,9 @@ def login(request):
         # Сheck for User
         user = User.objects.filter(email=email)
         if user.exists():
+            if not user[0].verified:
+                return HttpResponse(json.dumps({"result": False, 'error': 'Дождитесь верификации'}),
+                                    content_type='application/json')
             if check_password(password, user[0].password):
                 request.session['is_auth'] = user[0].pk
                 return HttpResponse(json.dumps({"result": True, 'error': ''}),
@@ -71,7 +94,7 @@ def login(request):
                             content_type='application/json')
 
 # Register View
-@csrf_exempt
+
 def register(request):
     if request.method == 'POST':
         data = str(request.body, 'utf-8')
@@ -130,9 +153,10 @@ def register(request):
                                 content_type='application/json')
         else:
             if type == 'user':
-                User(firstname=firstname, surname=surname, lastname=lastname, email=email,
-                     password=make_password(password), type=type, verified=True).save()
-                request.session['is_auth'] = True
+                user = User(firstname=firstname, surname=surname, lastname=lastname, email=email,
+                     password=make_password(password), type=type, verified=True)
+                user.save()
+                request.session['is_auth'] = user.pk
                 return HttpResponse(json.dumps({"result": True, 'error': ''}),
                                 content_type='application/json')
             elif type == 'organization':
@@ -145,18 +169,30 @@ def register(request):
     return HttpResponse(json.dumps({"result": False, 'error': 'Ошибка сервера. Попробуйте позже'}),
                         content_type='application/json')
 
-@csrf_exempt
+
 def logout(request):
     if request.method == 'POST':
         request.session['is_auth'] = None
+        return HttpResponse(json.dumps({"result": True, 'error': ''}), content_type='application/json')
+
+
+def accept_org(request):
+    if request.method == 'POST':
+        data = str(request.body, 'utf-8')
+        post_data = json.loads(data)
+        user = User.objects.get(pk=int(post_data['id']))
+        user.verified = True
+        user.save()
+        return HttpResponse(json.dumps({"result": True, 'error': ''}), content_type='application/json')
 
 
 # Auth Checker View
 def auth(request):
     try:
         if request.session['is_auth']:
-            return HttpResponse(json.dumps({'is_auth': True}), content_type='application/json')
+            user = User.objects.get(pk=request.session['is_auth'])
+            return HttpResponse(json.dumps({'id': request.session['is_auth'], 'type': user.type, 'result': True}), content_type='application/json')
     except KeyError:
         pass
 
-    return HttpResponse(json.dumps({'is_auth': False}), content_type='application/json')
+    return HttpResponse(json.dumps({'is_auth': 0, 'type': '', 'result': False}), content_type='application/json')

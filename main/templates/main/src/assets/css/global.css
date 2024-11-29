@@ -1,0 +1,430 @@
+/* Fonts */
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/ttf/Montserrat-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/ttf/Montserrat-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/ttf/Montserrat-Light.ttf);
+    font-weight: 300;
+}
+/* TODO: Install Fonts */
+
+
+/* CSS Reset */
+*{
+    padding: 0;
+    margin: 0;
+
+    /* TODO: Set Font */
+    font-family: Montserrat;
+
+    font-size: var(--defaultFont);
+    box-sizing: border-box;
+
+    /* TODO: Set Color */
+}
+
+/* Global */
+:root{
+    /* TODO: Set Colors */
+    /* Colors */
+    --colorGrey: #10002B;
+    --colorWhite: #fff;
+    --colorBlueLight: #C7CDF3;
+    --colorBlueMain: #9d4edd;
+
+    /* TODO: Set Borders */
+    /* Borders */
+
+    --h1: 10vw;
+    --h2: 70px;
+    --h3: 50px;
+    --h4: 38px;
+    --h5: 30px;
+    --h6: 20px;
+    --h7: 16px;
+    --defaultFont: 18px;
+}
+html::-webkit-scrollbar{
+    width: 8px;
+    /* TODO: Set Color */
+    /*background-color: var(--colorWhite);*/
+}
+html::-webkit-scrollbar-thumb{
+    /* TODO: Set Color */
+    /*background-color: var(--colorMainLight);*/
+    border-radius: 5px;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--colorGrey);
+}
+
+p, span, div, a{
+    color: var(--colorWhite);
+}
+
+.blue{
+    color: var(--colorBlueMain);
+}
+
+header{
+    position: fixed;
+    z-index: 9;
+    width: 100%;
+}
+.header_relative{
+    position: relative;
+}
+.section{
+    background-color: var(--colorGrey);
+    width: 100%;
+    display: grid;
+    padding: 100px 0;
+    grid-auto-flow: row;
+    justify-items: center;
+    align-content: center;
+    z-index: 2;
+    position: relative;
+}
+.container{
+    padding: 0 10%;
+    width: 100%;
+    display: grid;
+    grid-auto-flow: row;
+    justify-items: center;
+    align-content: start;
+}
+
+.btn{
+    padding: 16px 28px;
+    border-radius: 200px;
+    background-color: var(--colorBlueMain);
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    width: fit-content;
+    text-decoration: none;
+}
+
+.h1{
+    font-size: var(--h1);
+    width: 100%;
+}
+.h2{
+    font-size: var(--h2);
+    width: 100%;
+}
+.h3{
+    font-size: var(--h3); 
+    width: 100%;
+}
+.h4{
+    font-size: var(--h4);
+}
+.h5{
+    font-size: var(--h5);
+}
+.h6{
+    font-size: var(--h6);
+}
+.h7{
+    font-size: var(--h7);
+}
+
+p{
+    font-size: 20px;
+}
+
+.default-font{
+    font-size: var(--defaultFont);
+}
+.link{
+    color: black;
+    text-decoration: none;
+    /* cursor: pointer; */
+}
+/* TODO: Buttons Styles */
+.w-200{
+    font-weight: 200;
+}
+.w-300{
+    font-weight: 300;
+}
+.w-400{
+    font-weight: 400;
+}
+.w-500{
+    font-weight: 500;
+}
+.w-600{
+    font-weight: 600;
+}
+.w-700{
+    font-weight: 700;
+}
+
+/* TODO: Set Color Styles */
+/*.color-main{*/
+/*    color: var(--colorMain);*/
+/*}*/
+/*.color-main-light{*/
+/*    color: var(--colorMainLight);*/
+/*}*/
+/*.color-white{*/
+/*    color: var(--colorWhite);*/
+/*}*/
+/*.color-grey{*/
+/*    color: var(--colorGrey);*/
+/*}*/
+/*.color-black{*/
+/*    color: var(--colorBlack);*/
+/*}*/
+/*.color-second{*/
+/*    color: var(--colorSecond);*/
+/*}*/
+/*.color-red{*/
+/*    color: red;*/
+/*}*/
+/*.color-green{*/
+/*    color: #447e43;*/
+/*}*/
+.grid{
+    display: grid;
+}
+.gap-10{
+    gap: 10px;
+}
+.gap-25{
+    gap: 25px;
+}
+
+.gap-40{
+    gap: 40px;
+}
+.gap-50{
+    gap: 50px;
+}
+.gap-75{
+    gap: 75px;
+}
+.gap-100{
+    gap: 100px;
+}
+.grid-row{
+    grid-auto-flow: column;
+}
+.grid-column{
+    grid-auto-flow: row;
+}
+.ta-c{
+    text-align: center;
+}
+.jc-s{
+    justify-content: start;
+}
+.jc-c{
+    justify-content: center;
+}
+.jc-e{
+    justify-content: end;
+}
+.jc-sb{
+    justify-content: space-between;
+}
+.ac-s{
+    align-content: start;
+}
+.ac-c{
+    align-content: center;
+}
+.ac-e{
+    align-content: end;
+}
+.ac-sb{
+    align-content: space-between;
+}
+.ai-s{
+    align-items: start;
+}
+.ai-c{
+    align-items: center;
+}
+.ai-e{
+    align-items: end;
+}
+.ji-s{
+    justify-items: start;
+}
+.ji-c{
+    justify-items: center;
+}
+.ji-e{
+    justify-items: end;
+}
+.js-s{
+    justify-self: start;
+}
+.js-c{
+    justify-self: center;
+}
+.js-e{
+    justify-self: end;
+}
+.as-s{
+    align-self: start;
+}
+.as-c{
+    align-self: center;
+}
+.as-e{
+    align-self: end;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+.mb-25{
+    margin-bottom: 25px;
+}
+.mb-50{
+    margin-bottom: 50px;
+}
+.mb-75{
+    margin-bottom: 75px;
+}
+.mb-100{
+    margin-bottom: 100px;
+}
+.w-inherit{
+    font-weight: inherit;
+}
+.font-inherit{
+    font-size: inherit;
+}
+.family-inherit{
+    font-family: inherit;
+}
+.txt-inherit{
+    font-weight: inherit;
+    font-size: inherit;
+    font-family: inherit;
+}
+.width-100{
+    width: 100%;
+}
+
+/* TODO: Set Input And Form Styles */
+/*.label{*/
+/*    position: relative;*/
+/*    width: 100%;*/
+/*}*/
+/*.input + span{*/
+/*    transition: top .3s ease, left .3s ease, font-size .3s ease;*/
+/*    cursor: text;*/
+/*}*/
+/*.input:placeholder-shown + span{*/
+/*    position: absolute;*/
+/*    top: 5px;*/
+/*    left: 5px;*/
+/*}*/
+/*.input:not(:placeholder-shown) + span{*/
+/*    position: absolute;*/
+/*    top: -10px;*/
+/*    left: 5px;*/
+/*    font-size: 0.8em;*/
+/*}*/
+/*.input:focus{*/
+/*    border-bottom: 1px solid var(--colorMain);*/
+/*    color: var(--colorMain);*/
+/*}*/
+/*.form{*/
+/*    display: grid;*/
+/*    grid-auto-flow: row;*/
+/*    gap: 25px;*/
+/*    justify-items: center;*/
+/*    align-content: start;*/
+/*    width: 100%;*/
+/*    max-width: 768px;*/
+/*}*/
+/* Media */
+@media(max-width: 1280px){
+    :root{
+        --h1: 48px;
+        --h2: 40px;
+        --h3: 30px;
+        --h4: 22px;
+        --h5: 20px;
+        --h6: 18px;
+        --h7: 14px;
+        --defaultFont: 16px;
+    }
+}
+@media(max-width: 768px){
+    :root{
+        --h1: 40px;
+        --h2: 34px;
+        --h3: 28px;
+        --h4: 20px;
+        --h5: 18px;
+        --h6: 16px;
+        --h7: 16px;
+        --defaultFont: 16px;
+    }
+    .section{
+        padding: 75px 0;
+    }
+    .container{
+        padding: 0 5%;
+    }
+}
+@media(max-width: 576px){
+    :root{
+        --h1: 36px;
+        --h2: 30px;
+        --h3: 24px;
+        --h4: 20px;
+        --h5: 18px;
+        --h6: 16px;
+        --h7: 15px;
+        --defaultFont: 15px;
+    }
+
+    /* TODO: Set Button Media */
+    /*.btn-main, .btn-main-light, .btn-second{*/
+    /*    padding: 10px 20px;*/
+    /*}*/
+}
+@media(max-width: 375px){
+    :root{
+        --h1: 32px;
+        --h2: 24px;
+        --h3: 22px;
+        --h4: 18px;
+        --h5: 16px;
+        --h6: 15px;
+        --h7: 14px;
+        --defaultFont: 14px;
+    }
+    .section{
+        padding: 50px 0;
+    }
+    .container{
+        padding: 0 3%;
+    }
+    /* TODO: Set Buttons Media */
+    .btn-main, .btn-main-light, .btn-second{
+        padding: 7px 15px;
+    }
+}
