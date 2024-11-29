@@ -71,6 +71,7 @@ html{
 
 body{
     background-color: var(--colorGrey);
+    overflow-x: hidden;
 }
 
 p, span, div, a{
@@ -362,7 +363,6 @@ p{
 /* Media */
 @media(max-width: 1280px){
     :root{
-        --h1: 48px;
         --h2: 40px;
         --h3: 30px;
         --h4: 22px;
@@ -370,6 +370,10 @@ p{
         --h6: 18px;
         --h7: 14px;
         --defaultFont: 16px;
+    }
+
+    .container{
+        padding: 0 2%;
     }
 }
 @media(max-width: 768px){

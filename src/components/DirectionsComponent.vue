@@ -6,7 +6,7 @@
                 <div class="skills_block skills_block--sticky">
                     <h2 class="h2"><span class="blue h2">_</span>Направления <span class="h2 blue">&</span> Мероприятия</h2>
                     <div class="skills__inner">
-                        <div class="grid grid-row gap-25 jc-c ai-e">
+                        <div class="grid grid-row gap-25 jc-c ai-c">
                             <div class="skills-inner__img_wrap">
                                 <img class="skills-inner__img" :src="skill_active.icon" :alt="skill_active.title">
                             </div>
@@ -229,4 +229,19 @@
     .skills-inner__text{
         font-size: 20px;
     }
+
+    @media(max-width: 1280px){
+        .experience{
+            flex-direction: column;
+        }
+
+        .skills__container{
+            gap: 40px;
+        }
+    
+        .skills__container{
+            grid-template-columns: 1fr;
+        }
+    }
+    
 </style>

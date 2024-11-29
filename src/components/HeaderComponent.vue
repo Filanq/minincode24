@@ -15,7 +15,15 @@
                     <a class="link header_link header-section-2" @click="getClickFromHeader($event, anchors.projectsAnch)" ref="projectsHeaderBtn" href="#projects">Проекты</a>
                     <a class="link header_link header-section-2" @click="getClickFromHeader($event, anchors.contactsAnch)" ref="contactsHeaderBtn" href="#contacts">Контакты</a>
                 </div>
-                <!-- <span class="burger_menu" @click="isBurgerOpen = !isBurgerOpen"></span> -->
+                <span class="burger_btn" @click="isBurgerOpen = true"></span>
+                <div class="burger_menu grid grid-column gap-25">
+                    <router-link :to="{name: 'home'}">Home</router-link>
+                    <router-link :to="{name: 'home'}">Home</router-link>
+                    <router-link :to="{name: 'home'}">Home</router-link>
+                    <router-link :to="{name: 'home'}">Home</router-link>
+                    <router-link :to="{name: 'home'}">Home</router-link>
+                    <div class="cross" @click="isBurgerOpen = false"></div>
+                </div>
             </nav>
         </div>
     </div>
@@ -239,5 +247,53 @@
     .person-btn--active{
         background-color: blue;
         outline: blue 2px solid;
+    }
+
+    .burger_btn{
+        display: none;
+        background-image: url('../assets/images/icon/cross.png');
+        width: 50px;
+        height: 50px;
+        background-position: center;
+        background-size: cover
+    }
+
+    .burger_menu{
+        display: none !important;
+        position: relative;
+    }
+
+    @media(max-width: 1280px){
+        .burger_btn{
+            display: block;
+        }
+
+        .header_nav div{
+            display: none;
+        }
+
+        .burger_menu{
+            display: grid !important;
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 20px;
+            padding-top: 80px;
+            border-radius: 20px;
+            background-color: #a6a6a6;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+
+        .cross{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-image: url('../assets/images/icon/burger.png');
+            width: 50px;
+            height: 50px;
+            background-position: center;
+            background-size: cover
+        }
     }
 </style>

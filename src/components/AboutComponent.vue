@@ -117,4 +117,30 @@ window.addEventListener("scroll", (e) => {
     .about-us__result-block span{
         font-size: 60px;
     }
+
+    @media(max-width: 1280px){
+        .about-us__container{
+            gap: 40px;
+            grid-template-columns: 1fr;  
+        }
+
+        .about-us__main-wrap__gear{
+            display: none;
+        }
+
+        
+    }
+
+    @media(max-width: 768px){
+        .skills__container{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media(max-width: 576px){
+        p {
+            font-size: 14px;
+        }
+    }
+    
 </style>
